@@ -16,26 +16,24 @@ defmodule SymmetricEncryption do
   end
 
   def encrypt(data, key, initialization_vector, authenticated_additional_data \\ "") do
-    try do
-      {encrypted_data, tag} =
-        :crypto.crypto_one_time_aead(
-          :aes_256_gcm,
-          key,
-          initialization_vector,
-          data,
-          authenticated_additional_data,
-          @tag_length,
-          @encrypt
-        )
+    {encrypted_data, tag} =
+      :crypto.crypto_one_time_aead(
+        :aes_256_gcm,
+        key,
+        initialization_vector,
+        data,
+        authenticated_additional_data,
+        @tag_length,
+        @encrypt
+      )
 
-      {:ok, {initialization_vector, encrypted_data, tag}}
-    rescue
-      error ->
-        case error do
-          %ErlangError{original: {:badarg, _c_file_info, message}} -> {:error, message}
-          _ -> error |> IO.inspect()
-        end
-    end
+    {:ok, {initialization_vector, encrypted_data, tag}}
+  rescue
+    error ->
+      case error do
+        %ErlangError{original: {:badarg, _c_file_info, message}} -> {:error, message}
+        _ -> error |> IO.inspect()
+      end
   end
 
   def decrypt(
