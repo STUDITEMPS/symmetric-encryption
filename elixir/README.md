@@ -1,21 +1,31 @@
 # SymmetricEncryption
 
-**TODO: Add description**
+Provides tooling to symmetrically encrypt/decrypt data across different programming languages.
+
+## Supported Languages
+
+- Ruby
+- Elixir
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `symmetric_encryption` to your list of dependencies in `mix.exs`:
+### Ruby
+
+### Elixir
+
+The package can be installed by adding `symmetric_encryption` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:symmetric_encryption, "~> 0.1.0"}
+    {:symmetric_encryption, "~> 0.1", git: "https://github.com/STUDITEMPS/symmetric-encryption.git", branch: "main", sparse: ["elixir"]}
   ]
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/symmetric_encryption>.
+## Usage
 
+### General
+
+The underlying encryption algorithm is AES-256-GCM, that is the _Advanced Encryption Standard_ block cipher with _256_ bit keys in the _Galois Counter Mode_.
+The biggest error anyone can do when using AES-256-GCM is to reuse an initialization vector (IV) key pair. **NEVER USE THE SAME IV TWICE!** If you reuse an IV, you might as well post your secret key on Twitter.
