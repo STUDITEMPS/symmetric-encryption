@@ -20,7 +20,9 @@ defmodule SymmetricEncryptionTest do
 
       assert {:error, _message} = SymmetricEncryption.encrypt(data, key)
     end
+  end
 
+  describe "encrypt/4" do
     test "encrypts with pre-generated initialization vector" do
       data = "hello"
       key = :crypto.strong_rand_bytes(32)
