@@ -8,13 +8,16 @@ defmodule SymmetricEncryption do
   @encrypt true
   @decrypt not @encrypt
 
-  @spec encrypt(binary(), binary()) :: {:ok, {binary(), binary()}}
+  @spec encrypt(data :: binary(), key :: <<_::256>>) ::
+          {:ok, {iv :: <<_::96>>, encrypted_data :: binary(), tag :: <<_::128>>}}
   def encrypt(data, key) do
     initialization_vector = :crypto.strong_rand_bytes(12)
 
     encrypt(data, key, initialization_vector)
   end
 
+  @spec encrypt(data :: binary(), key :: <<_::256>>, iv :: binary(), aad :: binary()) ::
+          {:ok, {binary(), binary(), binary()}}
   def encrypt(data, key, initialization_vector, authenticated_additional_data \\ "") do
     {encrypted_data, tag} =
       :crypto.crypto_one_time_aead(
@@ -36,6 +39,13 @@ defmodule SymmetricEncryption do
       end
   end
 
+  @spec decrypt(
+          encrypted_data :: binary(),
+          key :: <<_::256>>,
+          iv :: binary(),
+          tag :: <<_::128>>,
+          aad :: binary()
+        ) :: {:ok, data :: binary()} | {:error, :decrypt_failed} | {:error, :invalid_tag_length}
   def decrypt(
         encrypted_data,
         key,
