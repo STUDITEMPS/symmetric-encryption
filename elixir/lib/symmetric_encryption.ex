@@ -38,15 +38,16 @@ defmodule SymmetricEncryption do
   ## Examples
 
     iex> key = :crypto.strong_rand_bytes(32)
-    iex> "secret text" |> SymmetricEncryption.encrypt(key)
-    {:ok, {<<_::96>>, <<_::88>>, <<_::128>>}}
+    iex> result = "secret text" |> SymmetricEncryption.encrypt(key)
+    iex> match?({:ok, {<<_::96>>, <<_::88>>, <<_::128>>}}, result)
+    true
   """
-  @spec encrypt(data :: binary(), key :: <<_::256>>) ::
+  @spec encrypt(data :: binary(), key :: <<_::256>>, aad :: binary()) ::
           {:ok, {iv :: <<_::96>>, encrypted_data :: binary(), tag :: <<_::128>>}}
-  def encrypt(data, key) do
+  def encrypt(data, key, authenticated_additional_data \\ "") do
     initialization_vector = :crypto.strong_rand_bytes(12)
 
-    encrypt(data, key, initialization_vector)
+    encrypt_with_iv(data, key, initialization_vector, authenticated_additional_data)
   end
 
   @doc """
@@ -73,16 +74,14 @@ defmodule SymmetricEncryption do
 
     iex> key = :crypto.strong_rand_bytes(32)
     iex> iv = :crypto.strong_rand_bytes(12)
-    iex> "secret text" |> SymmetricEncryption.encrypt(key, iv)
-    {:ok, {<<_::96>>, <<_::88>>, <<_::128>>}}
-
     iex> aad = "encrypted by Jim"
-    iex> "secret text" |> SymmetricEncryption.encrypt(key, iv, aad)
-    {:ok, {<<_::96>>, <<_::88>>, <<_::128>>}}}
+    iex> result = "secret text" |> SymmetricEncryption.encrypt_with_iv(key, iv, aad)
+    iex> match?({:ok, {<<_::96>>, <<_::88>>, <<_::128>>}}, result)
+    true
   """
-  @spec encrypt(data :: binary(), key :: <<_::256>>, iv :: binary(), aad :: binary()) ::
+  @spec encrypt_with_iv(data :: binary(), key :: <<_::256>>, iv :: binary(), aad :: binary()) ::
           {:ok, {iv :: <<_::96>>, encrypted_data :: binary(), tag :: <<_::128>>}}
-  def encrypt(data, key, initialization_vector, authenticated_additional_data \\ "") do
+  def encrypt_with_iv(data, key, initialization_vector, authenticated_additional_data) do
     {encrypted_data, tag} =
       :crypto.crypto_one_time_aead(
         :aes_256_gcm,
@@ -114,6 +113,9 @@ defmodule SymmetricEncryption do
   must also be included during decryption, otherwise decryption will fail.
 
   ## Examples
+
+    iex> key = :crypto.strong_rand_bytes(32)
+    iex> {:ok, {iv, encrypted_text, tag}} = "secret text" |> SymmetricEncryption.encrypt(key)
     iex> SymmetricEncryption.decrypt(encrypted_text, key, iv, tag)
     {:ok, "secret text"}
   """

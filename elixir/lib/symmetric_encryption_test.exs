@@ -2,7 +2,7 @@ defmodule SymmetricEncryptionTest do
   use ExUnit.Case
   doctest SymmetricEncryption
 
-  describe "encrypt/2" do
+  describe "encrypt/3" do
     test "encrypts some data given a key of valid length" do
       data = "hello"
       # 256 bits are 32 bytes
@@ -14,6 +14,20 @@ defmodule SymmetricEncryptionTest do
       assert byte_size(tag) == 16
     end
 
+    test "encrypts with additional data" do
+      data = "hello"
+      key = :crypto.strong_rand_bytes(32)
+
+      additional_data = "some plaintext but authenticated data"
+
+      assert {:ok, {_initialization_vector, _encrypted_data, _tag}} =
+               SymmetricEncryption.encrypt(
+                 data,
+                 key,
+                 additional_data
+               )
+    end
+
     test "fails given a key of invalid length" do
       data = "hello"
       key = :crypto.strong_rand_bytes(31)
@@ -22,17 +36,7 @@ defmodule SymmetricEncryptionTest do
     end
   end
 
-  describe "encrypt/4" do
-    test "encrypts with pre-generated initialization vector" do
-      data = "hello"
-      key = :crypto.strong_rand_bytes(32)
-      # can be of any length
-      initialization_vector = :crypto.strong_rand_bytes(32)
-
-      assert {:ok, {_initialization_vector, _encrypted_data, _tag}} =
-               SymmetricEncryption.encrypt(data, key, initialization_vector)
-    end
-
+  describe "encrypt_with_iv/4" do
     test "encrypts with initialization vector and additional data" do
       data = "hello"
       key = :crypto.strong_rand_bytes(32)
@@ -42,7 +46,12 @@ defmodule SymmetricEncryptionTest do
       additional_data = "some plaintext but authenticated data"
 
       assert {:ok, {_initialization_vector, _encrypted_data, _tag}} =
-               SymmetricEncryption.encrypt(data, key, initialization_vector, additional_data)
+               SymmetricEncryption.encrypt_with_iv(
+                 data,
+                 key,
+                 initialization_vector,
+                 additional_data
+               )
     end
   end
 
