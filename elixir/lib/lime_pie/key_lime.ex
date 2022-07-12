@@ -36,3 +36,9 @@ defmodule LimePie.KeyLime do
     end
   end
 end
+
+defimpl String.Chars, for: LimePie.KeyLime do
+  def to_string(%LimePie.KeyLime{name: name, key: key}) do
+    "#{name |> String.replace(~r/:/, "_")}:#{key |> Base.encode64()}"
+  end
+end

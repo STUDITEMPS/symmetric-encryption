@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -x 
+set -e
+function usage {
+  echo "$0 usage: --encoder LANGUAGE --decoder LANGUAGE path/to/event.json"
+  echo "  where LANGUAGE is one of: elixir ruby"
+  exit 1
+}
+
+if  [ "$#" -ne 5 ] || [ "$1" != "--encoder" ] || [ "$3" != "--decoder" ] || [ ! -f "$5" ] ; then 
+  usage
+fi
+
+ENCODER_LANGUAGE=$2
+DECODER_LANGUAGE=$4
+ORIGINAL_EVENT_FILE=$5
+
+BIN_DIR=$(dirname $0)
+NAMED_KEY=$($BIN_DIR/test_key)
+
+ENCODER=$BIN_DIR/encode_$2
+DECODER=$BIN_DIR/decode_$4
+
+TMP_DIR=$(mktemp -d)
+jq --sort-keys '.' $ORIGINAL_EVENT_FILE > $TMP_DIR/source.json
+$ENCODER $TMP_DIR/source.json "$NAMED_KEY" > $TMP_DIR/encrypted.json
+$DECODER $TMP_DIR/encrypted.json "$NAMED_KEY" | jq --sort-keys . > $TMP_DIR/decrypted.json
+diff $TMP_DIR/source.json $TMP_DIR/decrypted.json
+
+rm -rf $TMP_DIR

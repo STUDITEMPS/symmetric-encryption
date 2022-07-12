@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd $(dirname $0)/../elixir
+
+SOURCE_FILE="$1"
+NAMED_KEY="$2"
+mix lime_pie --key "$NAMED_KEY" --encode $SOURCE_FILE 
