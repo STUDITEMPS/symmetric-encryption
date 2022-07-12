@@ -1,0 +1,19 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/schichtbestellung/erhoehung-der-anzahl-benoetigter-studenten-in-schicht-beantragt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:schichtbestellung:erhoehung-der-anzahl-benoetigter-studenten-in-schicht-beantragt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "",
+  "correlates_with": "tech.studitemps:schichtbestellung:erhoehung-der-anzahl-benoetigter-studenten-in-schicht-beantragt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "enacted_by": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:56b4e83c-40a5-493f-920a-e937cadf29e2",
+  "occurred_at": "2020-05-07T08:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "beantragt_erhoehung_der_anzahl_benoetigter_studenten_in_schicht": {
+    "in_auftrag": "tech.studitemps:auftragserstellung:auftrag:50042",
+    "in_schicht": "tech.studitemps:schichtplan:schicht:fffe43e8-3c21-11e9-a429-fbf0d0f1071c",
+    "auf": "5",
+    "um": "2",
+    "von": "3"
+  }
+}

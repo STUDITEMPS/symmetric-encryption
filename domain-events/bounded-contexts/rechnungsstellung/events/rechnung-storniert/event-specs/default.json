@@ -1,0 +1,18 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/rechnungsstellung/rechnung-storniert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:rechnungsstellung:rechnung-storniert:f5a43458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:rechnungsstellung:rechnungslauf-gestartet:c0c6b4cb-6313-4494-abc2-0c1367fdc45c",
+  "correlates_with": "tech.studitemps:rechnungsstellung:rechnungslauf-gestartet:c0c6b4cb-6313-4494-abc2-0c1367fdc45c",
+  "enacted_by": "tech.studitemps:identity:application:rechnungsstellung-app@studitemps.de",
+  "occurred_at": "2022-04-01T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "storniert_rechnung": {
+    "@id": "tech.studitemps:rechnungsstellung:rechnung:2022-000001",
+    "durch": "tech.studitemps:rechnungsstellung:stornorechnung:2022-000002",
+    "am_tag": "2022-04-01",
+    "als_dokument": "https://studitemps-tech.s3.eu-central-1.amazonaws.com/tech.studitemps:rechnungsstellung:debitor:50000/2022-000002.pdf"
+  }
+}

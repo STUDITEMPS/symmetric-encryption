@@ -1,0 +1,19 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/freigabe/arbeitszeit-fuer-payroll-freigegeben",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:freigabe:arbeitszeit-fuer-payroll-freigeben:92e6baa9-0818-49ef-880c-a96a8f990687",
+  "caused_by": "tech.studitemps:freigabe:arbeitszeit-fuer-payroll-freigeben:92e6baa9-0818-49ef-880c-a96a8f990687",
+  "correlates_with": "tech.studitemps:freigabe:correlation-id:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+  "enacted_by": "tech.studitemps:freigabe",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "gibt_arbeitszeit_frei": {
+    "@id": "tech.studitemps:unternehmenszeiten:arbeitszeit:f4715430-70b8-0136-1580-54e1ad118e9f",
+    "initial_erfasste_arbeitszeit": "tech.studitemps:unternehmenszeiten:arbeitszeit:f4715430-70b8-0136-1580-54e1ad118e9f",
+    "geleistet_von": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+    "fand_im_auftrag_statt": "tech.studitemps:temping:auftrag:67855",
+    "fand_im_intervall_statt": "2019-04-16T22:00:00+02:00/2019-04-17T06:00:00+02:00",
+    "hatte_gesamtpausendauer_in_stunden_von": 1.2
+  }
+}

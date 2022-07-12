@@ -1,0 +1,22 @@
+{
+    "@type": [
+      "https://studitemps.tech/specification/schichtplanung/student-aus-schicht-entfernt",
+      "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:schichtplanung:student-aus-schicht-entfernt:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:shift-scheduling:cancel-student:09fe1bb3-d945-4ab4-a157-258a854aaaf9",
+    "correlates_with": "tech.studitemps:shift-scheduling:cancel-student:09fe1bb3-d945-4ab4-a157-258a854aaaf9",
+    "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+    "occurred_at": "2019-04-18T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "entfernt_student_aus_schicht": {
+      "student": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+      "in_auftrag": "tech.studitemps:auftragserstellung:auftrag:50042",
+      "schicht": {
+        "@id": "tech.studitemps:schichtplan:flextime:ffff3978-43d9-11e9-937d-8b7a74e3da80",
+        "zeitraum": "2019-04-22/2019-04-28",
+        "netto_arbeitszeit": "PT10H",
+        "pause": null
+      }
+    }
+  }

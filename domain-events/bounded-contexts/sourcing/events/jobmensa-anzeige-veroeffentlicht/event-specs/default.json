@@ -1,0 +1,31 @@
+{
+    "@type": [
+      "https://studitemps.tech/specification/sourcing/jobmensa-anzeige-veroeffentlicht",
+      "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:sourcing:jobmensa-anzeige-veroeffentlicht:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:sourcing:jobmensa-anzeige-veroeffentlicht:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "correlates_with": "tech.studitemps:sourcing:jobmensa-anzeige-veroeffentlicht:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "enacted_by": "tech.studitemps:sourcing:jobmensa-expires-joboffer",
+    "occurred_at": "2019-04-18T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "veroeffentlicht_jobmensa_anzeige": {
+      "@id": "tech.studitemps:sourcing:jobmensa-anzeige:5cdd5a57-1914-4289-9db1-fb731dbcc715",
+      "titel": "Aushilfe (m/w)",
+      "url": "https://www.jobmensa.de/jobs/397264-aushilfe-lager-beim-e-scooter-verleih-m-w-d-muenchen",
+      "stellenbeschreibung": "Es wird eine Aushilfe gesucht.",
+      "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50042",
+      "taetigkeit": "tech.studitemps:daisy:taetigkeit:9e14de81-a7ba-4e07-a7d7-7f3ac0670746",
+      "veroeffentlicht_am": "2019-05-24T14:56:13+02:00",
+      "laeuft_ab_am": "2019-06-07T14:56:13+02:00",
+      "stundenlohn_in_cent": "1250",
+      "einsatzort": {
+        "plz": "51105",
+        "stadt": "Köln",
+        "strasse": "Am Weizenacker",
+        "hausnummer": "1",
+        "land": "Deutschland"
+      },
+      "standort": "tech.studitemps:daisy:standort:fb824d5c-e1ab-40c3-a915-90577491ada8"
+    }
+  }

@@ -1,0 +1,16 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/temping/anzahl-gewuenschter-mitarbeiter-festgelegt",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:temping:anzahl-gewuenschter-mitarbeiter-festgelegt:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:orders:max-headcount-set:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "correlates_with": "tech.studitemps:orders:set-max-headcount:1a37f142-97a4-4397-9960-3ab29fac8fb8",
+    "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+    "occurred_at": "2019-04-18T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "legt_anzahl_gewuenschter_mitarbeiter_fest": {
+        "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50000",
+        "anzahl": 7
+    }
+}

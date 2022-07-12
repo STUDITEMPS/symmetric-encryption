@@ -1,0 +1,16 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/auftragszuordnung/arbeitszeit-zu-auftrag-zugeordnet",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:auftragszuordnung:arbeitszeit-zu-auftrag-zugeordnet:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:studentenzeiterfassung:urspung-foo-bar:e52c1d72-77e4-4813-9e6b-632cc454c86f",
+  "correlates_with": "tech.studitemps:studentenzeiterfassung:gemeinsam-erstelltes-event-foo-bar:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "dokumentiert_arbeitszeit": {
+    "@id": "tech.studitemps:studentenzeiterfassung:arbeitszeit:f4715430-70b8-0136-1580-54e1ad118e9f",
+    "fand_im_auftrag_statt": "tech.studitemps:auftragserstellung:auftrag:67855"
+  }
+}

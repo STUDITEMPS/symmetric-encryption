@@ -1,0 +1,37 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/kundenverwaltung/kundenmitarbeiterberechtigungen-beantragt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:kundenverwaltung:kundenmitarbeiterberechtigungen-beantragt:17b4e83c-7005-493f-920a-e937ca3d09e2",
+  "caused_by": "tech.studitemps:kundenverwaltung:kundenmitarbeiterberechtigungen-beantragen:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+  "correlates_with": "tech.studitemps:kundenverwaltung:kundenmitarbeiterberechtigungen-beantragen:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+  "enacted_by": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+  "occurred_at": "2020-04-18T10:01:00+02:00",
+  "unreliable_debugging_data": {},
+  "beantragt_kundenmitarbeiterberechtigungen": {
+    "fuer_kundenmitarbeiter": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+    "berechtigungen": [
+      {
+        "name": "mitarbeiterverwaltung",
+        "hat_zugang": true
+      },
+      {  
+        "name": "vertraege",
+        "hat_zugang": true
+      },
+      { 
+        "name": "bestellen",
+        "hat_zugang": true
+      },
+      {
+        "name": "zeiterfassung",
+        "hat_zugang": true
+       },
+      {
+        "name": "feedback",
+        "hat_zugang": true
+      }
+    ]
+  }
+}

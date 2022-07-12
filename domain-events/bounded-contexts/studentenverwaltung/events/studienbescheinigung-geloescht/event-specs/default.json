@@ -1,0 +1,38 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/studentenverwaltung/studienbescheinigung-geloescht",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:studentenverwaltung:studienbescheinigung-geloescht:db9edb67-9440-41e9-bc1b-b3a641cd7e9b",
+    "caused_by": "tech.studitemps:studentenverwaltung:studienbescheinigung-geloescht:db9edb67-9440-41e9-bc1b-b3a641cd7e9b",
+    "correlates_with": "tech.studitemps:studentenverwaltung:studienbescheinigung-geloescht:db9edb67-9440-41e9-bc1b-b3a641cd7e9b",
+    "enacted_by": "tech.studitemps:studentenverwaltung:student:4462a20b-1a1f-410d-82b6-4d195cb79fbb",
+    "occurred_at": "2021-08-04T14:00:00+02:00",
+    "loescht_studienbescheinigung": {
+        "student": "tech.studitemps:studentenverwaltung:student:4462a20b-1a1f-410d-82b6-4d195cb79fbb",
+        "studienbescheinigung": "tech.studitemps:studentenverwaltung:studienbescheinigung:d550293d-f98a-4853-852d-c69bfe1482ab",
+        "studentenangaben": {
+            "gueltig_ab": "2021-01-01",
+            "gueltig_bis": "2021-06-01",
+            "dateien": [
+                "https://some.random.uri"
+            ],
+            "universitaet": {
+                "name": "Universität Bonn",
+                "staatlich_anerkannt": true
+            },
+            "studienfaecher": [
+                {
+                    "fachsemester": 1,
+                    "studienfach": "Informatik"
+                }
+            ],
+            "studienart": "tech.studitemps:beschaeftigungsart:vollzeit",
+            "besonderheiten": [
+                "tech.studitemps:studentenverwaltung:studienbesonderheit:promotion",
+                "tech.studitemps:studentenverwaltung:studienbesonderheit:urlaubssemester",
+                "tech.studitemps:studentenverwaltung:studienbesonderheit:vorbereitungssemester"
+            ]
+        }
+    }
+}

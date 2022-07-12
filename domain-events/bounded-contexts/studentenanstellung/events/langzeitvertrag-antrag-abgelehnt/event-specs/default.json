@@ -1,0 +1,19 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenanstellung/langzeitvertrag-antrag-abgelehnt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenanstellung:langzeitvertrag-antrag-abgelehnt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:temping:langzeitvertrag-beantragt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "correlates_with": "tech.studitemps:temping:langzeitvertrag-beantragt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "enacted_by": "tech.studitemps:studentenanstellung:create-long-term-contract",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "lehnt_vertragsantrag_ab": {
+    "grund": "Toller Grund",
+    "student": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+    "wochenstunden": 14,
+    "von": "2019-04-18",
+    "bis": "2019-04-18"
+  }
+}

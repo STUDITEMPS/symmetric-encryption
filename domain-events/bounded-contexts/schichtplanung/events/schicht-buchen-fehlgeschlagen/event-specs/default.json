@@ -1,0 +1,20 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/schichtplanung/schicht-buchen-fehlgeschlagen",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:schichtplanung:schicht-buchen-fehlgeschlagen:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:shift-scheduling:schedule-student:09fe1bb3-d945-4ab4-a157-258a854aaaf9",
+    "correlates_with": "tech.studitemps:schichtplanung:buche-schicht:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "enacted_by": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+    "occurred_at": "2019-04-18T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "kann_schicht_nicht_buchen": {
+        "student": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+        "schicht": "tech.studitemps:schichtplan:schicht:fffe43e8-3c21-11e9-a429-fbf0d0f1071c",
+        "gruende": [
+            "tech.studitemps:schichtplanung:schicht-buchen-fehlgeschlagen-grund:student-hat-urlaub",
+            "tech.studitemps:schichtplanung:schicht-buchen-fehlgeschlagen-grund:equal-pay-erreicht"
+        ]
+    }
+}

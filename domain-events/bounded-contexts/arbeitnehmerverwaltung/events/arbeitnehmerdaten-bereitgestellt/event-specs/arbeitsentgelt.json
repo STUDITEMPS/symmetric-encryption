@@ -1,0 +1,22 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/arbeitnehmerverwaltung/arbeitnehmerdaten-bereitgestellt",
+    "https://studitemps.tech/specification/reply-event"
+  ],
+  "@id": "tech.studitemps:arbeitnehmerverwaltung:arbeitnehmerdaten:17b4e83c-7005-493f-920a-e937ca3d09e2",
+  "enacted_by": "tech.studitemps:arbeitnehmerverwaltung",
+  "caused_by": "tech.studitemps:arbeitsentgelt:arbeitnehmerdaten-benoetigt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "correlates_with": "tech.studitemps:arbeitsentgelt:arbeit-geleistet:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "occurred_at": "2019-04-22T10:01:00+02:00",
+  "unreliable_debugging_data": {},
+  "arbeitnehmerdaten": {
+    "@id": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+    "vorname": "Monika",
+    "nachname": "Musterfrau",
+    "personalnummer": "2011345"
+  },
+  "reply": {
+    "exchange": "arbeitsentgelt",
+    "routing_key": "arbeitnehmerdaten-bereitgestellt"
+  }
+}

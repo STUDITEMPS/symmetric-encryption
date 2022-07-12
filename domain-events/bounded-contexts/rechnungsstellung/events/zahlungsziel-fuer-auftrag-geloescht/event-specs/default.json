@@ -1,0 +1,11 @@
+{
+    "@type": [
+      "https://studitemps.tech/specification/rechnungsstellung/zahlungsziel-fuer-auftrag-geloescht",
+      "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:rechnungsstellung:zahlungsziel-fuer-auftrag-geloescht:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "loescht_zahlungsziel": {
+      "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50000",
+      "gueltig_ab": "2018-12-01"
+    }
+  }

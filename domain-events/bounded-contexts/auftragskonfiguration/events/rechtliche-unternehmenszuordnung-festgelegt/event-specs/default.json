@@ -1,0 +1,17 @@
+{
+    "@type": [
+      "https://studitemps.tech/specification/auftragskonfiguration/rechtliche-unternehmenszuordnung-festgelegt",
+      "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:auftragskonfiguration:rechtliche-unternehmenszuordnung-festgelegt:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:order-configuration:define-legal-company-connection-via-zendesk-sell:2fb6db19-f4af-4807-999b-5df0ca3970bc",
+    "correlates_with": "tech.studitemps:order-configuration:define-legal-company-connection-via-zendesk-sell:2fb6db19-f4af-4807-999b-5df0ca3970bc",
+    "enacted_by": "tech.studitemps:temping:mitarbeiter:6c110e8a-b658-11e8-98e8-9bb51f632c8f",
+    "occurred_at": "2019-01-15T15:00:00+01:00",
+    "unreliable_debugging_data": {},
+    "legt_rechtliche_unternehmenszuordnung_fest": {
+      "handelsregisternummer": "Amtsgericht Hamburg, HRA 107144",
+      "firmenname_legal": "H&M Hennes&Mauritz B.V. & Co.KG",
+      "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50000"
+    }
+  }

@@ -1,0 +1,19 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/auftragskonfiguration/unternehmenskontakt-fuer-zeiterfassung-festgelegt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:auftragskonfiguration:unternehmenskontakt-fuer-zeiterfassung-festgelegt:2bdcce8f-197e-49b6-8b65-02bb204bb2f4",
+  "caused_by": "tech.studitemps:order-configuration:define-company-contact-for-time-tracking:b87ef4e2-4a78-465e-9ce4-a2b1ead44034",
+  "correlates_with": "tech.studitemps:order-configuration:define-company-contact-for-time-tracking:b87ef4e2-4a78-465e-9ce4-a2b1ead44034",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:temping.mitarbeiter@studitemps.de",
+  "occurred_at": "2019-12-13T10:16:34+01:00",
+  "legt_unternehmenskontakt_fuer_zeiterfassung_fest": {
+    "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50000",
+    "unternehmenskontakt": {
+      "vorname": "Maxi",
+      "nachname": "Müller",
+      "email": "maxi.mueller@example.com"
+    }
+  }
+}

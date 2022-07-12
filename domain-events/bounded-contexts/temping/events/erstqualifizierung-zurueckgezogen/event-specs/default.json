@@ -1,0 +1,15 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/temping/erstqualifizierung-zurueckgezogen",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:temping:erstqualifizierung-zurueckgezogen:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:temping:reset-student-attended-intake:67f4f580-a781-4c96-aa9c-bbb5c0be5ab3",
+    "correlates_with": "tech.studitemps:temping:reset-student-attended-intake:67f4f580-a781-4c96-aa9c-bbb5c0be5ab3",
+    "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+    "occurred_at": "2019-04-18T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "zieht_erstqualizifierung_zurueck": {
+        "student": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804"
+    }
+}

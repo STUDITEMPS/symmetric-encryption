@@ -1,0 +1,18 @@
+{
+	"@type": [
+		"https://studitemps.tech/specification/arbeitszeitbestaetigung/gesamte-arbeitszeit-von-unternehmen-abgelehnt",
+		"https://studitemps.tech/specification/domain-event"
+	],
+	"@id": "tech.studitemps:arbeitszeitbestaetigung:gesamte-arbeitszeit-von-unternehmen-abgelehnt:e7f4e458-3da6-427d-88e3-227bbad22062",
+	"caused_by": "tech.studitemps:arbeitszeitbestaetigung:lehnt-gesamte-arbeitszeit-von-unternehmen-ab:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+	"correlates_with": "tech.studitemps:arbeitszeitbestaetigung:lehnt-gesamte-arbeitszeit-von-unternehmen-ab:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+	"enacted_by": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:56b4e83c-40a5-493f-920a-e937cadf29e2",
+	"occurred_at": "2020-04-22T10:23:00+02:00",
+	"unreliable_debugging_data": {},
+	"lehnt_gesamte_arbeitszeit_ab": {
+		"@id": "tech.studitemps:studentenzeiterfassung:arbeitszeit:f4715430-70b8-0136-1580-54e1ad118e9f",
+		"von_student": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+		"in_auftrag": "tech.studitemps:auftragserstellung:auftrag:50042",
+		"in_schicht": "tech.studitemps:schichtplan:schicht:fffe43e8-3c21-11e9-a429-fbf0d0f1071c"
+	}
+}

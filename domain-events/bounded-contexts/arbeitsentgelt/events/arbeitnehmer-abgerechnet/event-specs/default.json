@@ -1,0 +1,38 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/arbeitsentgelt/lohnschein-erstellt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:arbeitsentgelt:arbeitnehmer-abgerechnet:7e5c1bb6-a564-407f-9bf9-ac1dba1560cd",
+  "unreliable_debugging_data": {
+    "arbeitszeiten": [
+      {
+        "@id": "tech.studitemps:studentenzeiterfassung:arbeitszeit:f4715430-70b8-0136-1580-54e1ad118e9f",
+        "geleistet_von": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+        "fand_im_intervall_statt": "2019-04-16T22:00:00+02:00/2019-04-17T06:00:00+02:00",
+        "fand_im_auftrag_statt": "tech.studitemps:auftragserstellung:auftrag:50123",
+        "freigabe_zeitpunkt": "2019-04-16T22:00:00+02:00",
+        "enthielt_pausen": [
+          {
+            "fand_im_intervall_statt": "2019-04-17T02:00:00+02:00/2019-04-17T03:00:00+02:00"
+          }
+        ],
+        "hatte_gesamtpausendauer_in_stunden_von": 1
+      }
+    ]
+  },
+  "dokumentiert_abrechnung": {
+    "fuer_arbeitnehmer": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+    "fuer_abrechnungsmonat": "2019-02",
+    "mit_lohnzeilen": [
+      {
+        "@id": "tech.studitemps:arbeitsentgelt:lohnzeile:3df9132d-0732-4ed9-b380-0d8513f59804",
+        "@type": "tech.studitemps:arbeitsentgelt:lohnzeile",
+        "datum": "2019-02-08",
+        "lohnart": "tech.studitemps:arbeitsentgelt:lohnart:arbeitslohn",
+        "menge": 6.0,
+        "preis_in_cent": 1150
+      }
+    ]
+  }
+}

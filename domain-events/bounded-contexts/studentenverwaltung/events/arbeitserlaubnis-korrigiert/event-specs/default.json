@@ -1,0 +1,23 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/arbeitserlaubnis-korrigiert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:arbeitserlaubnis-korrigiert:eeb33fa8-9de3-4d8d-90ea-e70569f4ede3",
+  "caused_by": "tech.studitemps:studentenverwaltung:arbeitserlaubnis-korrigiert:eeb33fa8-9de3-4d8d-90ea-e70569f4ede3",
+  "correlates_with": "tech.studitemps:studentenverwaltung:arbeitserlaubnis-korrigiert:eeb33fa8-9de3-4d8d-90ea-e70569f4ede3",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:aab4095a-a3fe-476b-ba5c-2852f467eeec",
+  "occurred_at": "2021-08-04T14:00:00+02:00",
+  "korrigiert_arbeitserlaubnis": {
+    "student": "tech.studitemps:studentenverwaltung:student:aab4095a-a3fe-476b-ba5c-2852f467eeec",
+    "arbeitserlaubnis": "tech.studitemps:studentenverwaltung:arbeitserlaubnis:7c108ddf-8f95-41fb-aee8-712c7a4c75b3",
+    "studentenangaben": {
+      "gueltig_ab": "2021-01-03",
+      "gueltig_bis": null,
+      "dateien": [
+        "https://some.uri.updated"
+      ],
+      "staat": "Pakistan"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/angaben-von-arbeitserlaubnis-bestaetigt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:angaben-von-arbeitserlaubnis-bestaetigt:61e05058-dc80-4baa-8978-bc9905499249",
+  "caused_by": "tech.studitemps:studentenverwaltung:arbeitserlaubnis-vorgelegt:61e05058-dc80-4baa-8978-bc9905499249",
+  "correlates_with": "tech.studitemps:studentenverwaltung:arbeitserlaubnis-vorgelegt:61e05058-dc80-4baa-8978-bc9905499249",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+  "occurred_at": "2021-08-04T14:00:00+02:00",
+  "bestaetigt_angaben_von_arbeitserlaubnis": {
+    "student": "tech.studitemps:studentenverwaltung:student:2f52504e-f7f7-433e-8188-ee4581477e66",
+    "arbeitserlaubnis": "tech.studitemps:studentenverwaltung:arbeitserlaubnis:94aa979d-0e22-4c0d-ad11-8a5bbaf9c491",
+    "studentenangaben": {
+      "gueltig_ab": "2021-05-01",
+      "gueltig_bis": "2021-06-30",
+      "dateien": [
+        "https://some.uri"
+      ],
+      "staat": "Slowenien"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenanstellung/langzeitvertrag-versendet",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenanstellung:langzeitvertrag-versendet:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:contracts:request-long-term-contract:9ac44ad6-3d6e-4732-bbba-e5abc0b26c51",
+  "correlates_with": "tech.studitemps:contracts:request-long-term-contract:9ac44ad6-3d6e-4732-bbba-e5abc0b26c51",
+  "enacted_by": "tech.studitemps:studentenanstellung:deliver_weekly_contract",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "dokumentiert_langzeitvertrag_versand": {
+    "@id": "tech.studitemps:studentenanstellung:langzeitvertrag:cl/200324/2",
+    "version": 2,
+    "vertragsnummer": "cl/200324/2/2",
+    "student": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+    "download_url": "https://ch-employment-staging.s3.amazonaws.com/3df9132d-0732-4ed9-b380-0d8513f59804/5d424d44-fb3d-4a80-999d-5d6142605c9c_2.pdf",
+    "wochenstunden": 14.0,
+    "von": "2019-04-18",
+    "bis": "2019-08-01",
+    "versendet_am": "2019-04-18T10:00:00+02:00",
+    "beantragt_von": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de"
+  }
+}

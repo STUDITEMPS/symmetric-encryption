@@ -1,0 +1,15 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/freigabe/arbeitszeit-abgelehnt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:freigabe:arbeitszeit-abgelehnt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "correlates_with": "tech.studitemps:leistungsnachweis:abweichende-arbeitszeit-von-unternehmen-erfasst:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:leistungsnachweis:arbeitszeit-von-unternehmen-abgelehnt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:max.mustermann@studitemps.de",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "lehnt_arbeitszeit_ab": {
+    "@id": "tech.studitemps:studentenzeiterfassung:arbeitszeit:f4715430-70b8-0136-1580-54e1ad118e9f"
+  }
+}

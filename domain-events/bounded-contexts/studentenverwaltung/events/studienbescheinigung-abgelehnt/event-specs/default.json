@@ -1,0 +1,16 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/studienbescheinigung-abgelehnt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:studienbescheinigung-abgelehnt:61e05058-dc80-4baa-8978-bc9905499249",
+  "caused_by": "tech.studitemps:studentenverwaltung:studienbescheinigung-vorgelegt:61e05058-dc80-4baa-8978-bc9905499249",
+  "correlates_with": "tech.studitemps:studentenverwaltung:studienbescheinigung-vorgelegt:61e05058-dc80-4baa-8978-bc9905499249",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+  "occurred_at": "2021-08-04T14:00:00+02:00",
+  "lehnt_studienbescheinigung_ab": {
+    "student": "tech.studitemps:studentenverwaltung:student:36de05ce-9458-43bf-8d5b-9e69f86f9779",
+    "studienbescheinigung": "tech.studitemps:studentenverwaltung:studienbescheinigung:83609075-bbcd-470d-b713-2081c562f9dc",
+    "ablehngrund": "tech.studitemps:studentenverwaltung:studentendokument-abgelehnt-grund:abweichende-gueltigkeit"
+  }
+}

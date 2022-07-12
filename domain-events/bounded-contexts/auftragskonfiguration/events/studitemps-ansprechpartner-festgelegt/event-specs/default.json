@@ -1,0 +1,19 @@
+{
+  "@id": "tech.studitemps:auftragskonfiguration:studitemps-ansprechpartner-festgelegt:8dc58878-a6d9-4948-a46a-b07ce802b3ee",
+  "@type": [
+    "https://studitemps.tech/specification/auftragskonfiguration/studitemps-ansprechpartner-festgelegt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "caused_by": "tech.studitemps:order-configuration:assign-assignment-notification-contact:ce74c1cb-6b51-4eb0-bcbc-d6da82882017",
+  "correlates_with": "tech.studitemps:order-configuration:assign-assignment-notification-contact:ce74c1cb-6b51-4eb0-bcbc-d6da82882017",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+  "occurred_at": "2020-07-27T16:00:04+02:00",
+  "legt_studitemps_ansprechpartner_fest": {
+    "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50000",
+    "email": "maxi.mueller@studitemps.de",
+    "anrede": "Frau",
+    "vorname": "Maxi",
+    "nachname": "Müller",
+    "telefonnummer": "0221 23456789-01"
+  }
+}

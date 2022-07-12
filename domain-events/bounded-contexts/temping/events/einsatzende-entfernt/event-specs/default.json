@@ -1,0 +1,15 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/temping/einsatzende-entfernt",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:temping:einsatzende-entfernt:65e7938e-5341-4deb-ac95-5b1417d5f598",
+    "caused_by": "tech.studitemps:auftrag:einsatzende-korrigiert:65e7938e-5341-4deb-ac95-5b1417d5f598",
+    "correlates_with": "tech.studitemps:auftrag:einsatzende-korrigiert:65e7938e-5341-4deb-ac95-5b1417d5f598",
+    "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:max.mustermann@studitemps.de",
+    "occurred_at": "2019-04-18T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "entfernt_einsatzende": {
+        "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50000"
+    }
+}

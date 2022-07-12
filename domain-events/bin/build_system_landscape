@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require './lib/system_landscape/system_landscape'
+
+SystemLandscape.new.call

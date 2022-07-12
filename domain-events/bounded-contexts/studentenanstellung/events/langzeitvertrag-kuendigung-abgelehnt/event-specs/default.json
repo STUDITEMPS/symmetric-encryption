@@ -1,0 +1,20 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/studentenanstellung/langzeitvertrag-kuendigung-abgelehnt",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:studentenanstellung:langzeitvertrag-kuendigung-abgelehnt:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:temping:langzeitvertrag-beantragt:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "correlates_with": "tech.studitemps:temping:langzeitvertrag-beantragt:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "enacted_by": "tech.studitemps:studentenanstellung:terminate-long-term-contract-by-studitemps",
+    "occurred_at": "2018-07-02T00:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "lehnt_vertragskuendigung_ab": {
+        "grund": "Termination date 2018-09-05 must be end of week (2018-09-09).",
+        "student": "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce",
+        "vertrag": "tech.studitemps:studentenanstellung:langzeitvertrag:462155a5-929e-4e80-9808-eb81a5270dc0",
+        "gekuendigt_zum": "2018-09-05",
+        "kuendigungsgrund": "Ordentliche Kündigung",
+        "gekuendigt_von": "tech.studitemps:temping:mitarbeiter:3a9c2e23-d64f-46ae-8ca1-d439a628d4c9"
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/arbeitserlaubnis-geloescht",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:arbeitserlaubnis-geloescht:7de12efd-b016-438e-8312-eb110ebe5e8e",
+  "caused_by": "tech.studitemps:studentenverwaltung:arbeitserlaubnis-geloescht:7de12efd-b016-438e-8312-eb110ebe5e8e",
+  "correlates_with": "tech.studitemps:studentenverwaltung:arbeitserlaubnis-geloescht:7de12efd-b016-438e-8312-eb110ebe5e8e",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:556ad8fd-132e-4c8f-bb6a-ef345839ca38",
+  "occurred_at": "2021-08-04T14:00:00+02:00",
+  "loescht_arbeitserlaubnis": {
+    "student": "tech.studitemps:studentenverwaltung:student:556ad8fd-132e-4c8f-bb6a-ef345839ca38",
+    "arbeitserlaubnis": "tech.studitemps:studentenverwaltung:arbeitserlaubnis:29135862-3028-4426-9af7-f81386fa1557",
+    "studentenangaben": {
+      "gueltig_ab": "2021-01-01",
+      "gueltig_bis": "2021-06-01",
+      "dateien": [
+        "https://some.random.uri"
+      ],
+      "staat": "Indien"
+    }
+  }
+}

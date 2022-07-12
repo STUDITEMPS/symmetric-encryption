@@ -1,0 +1,16 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/qualifizierung/student-qualifiziert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:qualifizierung:student-qualifiziert:16ab1658-92d9-421c-a68d-ccb42eefa73b",
+  "caused_by": "tech.studitemps:qualifications:qualify-student:ce57fe16-695c-4233-b701-f7fe07df497e",
+  "correlates_with": "tech.studitemps:qualifications:qualify-student:ce57fe16-695c-4233-b701-f7fe07df497e",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "qualifiziert_student": {
+    "student": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+    "auftrag": "tech.studitemps:auftragserstellung:auftrag:50042"
+  }
+}

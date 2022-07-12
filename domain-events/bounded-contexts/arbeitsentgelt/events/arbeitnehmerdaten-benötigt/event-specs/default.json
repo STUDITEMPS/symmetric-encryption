@@ -1,0 +1,21 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/arbeitsentgelt/arbeitnehmerdaten-benoetigt",
+    "https://studitemps.tech/specification/request-event"
+  ],
+  "@id": "tech.studitemps:arbeitsentgelt:arbeitnehmerdaten-benoetigt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "enacted_by": "tech.studitemps:arbeitsentgelt-service",
+  "correlates_with": "tech.studitemps:arbeitsentgelt:arbeitszeit-fuer-payroll-freigegeben:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "occurred_at": "2019-04-22T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "arbeitnehmerdaten_benoetigt": {
+    "fuer_arbeitnehmer": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+    "benoetigte_daten": {
+      "personalnummer": "string"
+    }
+  },
+  "reply": {
+    "exchange": "arbeitsentgelt",
+    "routing_key": "arbeitnehmerdaten-bereitgestellt"
+  }
+}

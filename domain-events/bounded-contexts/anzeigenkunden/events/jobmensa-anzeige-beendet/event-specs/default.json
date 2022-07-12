@@ -1,0 +1,15 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/anzeigenkunden/jobmensa-anzeige-beendet",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:anzeigenkunden:jobmensa-anzeige-beendet:8294e966-e293-428b-a3f0-001977588bd1",
+  "enacted_by": "tech.studitemps:anzeigenkunden:kontakt:hendrik.gebhardt+company@studitemps.de",
+  "occurred_at": "2020-03-17T07:18:58+01:00",
+  "caused_by": "tech.studitemps:anzeigenkunden:jobmensa-anzeige-beendet:8294e966-e293-428b-a3f0-001977588bd1",
+  "correlates_with": "tech.studitemps:anzeigenkunden:jobmensa-anzeige-beendet:8294e966-e293-428b-a3f0-001977588bd1",
+  "beendet_jobmensa_anzeige": {
+    "@id": "tech.studitemps:anzeigenkunden:jobmensa_anzeige:dddc022e-32e4-4be1-a3ca-94ccda687c44",
+    "ursache": "tech.studitemps:anzeigenkunden:jobmensa-anzeigen-ende:manuell-beendet"
+  }
+}

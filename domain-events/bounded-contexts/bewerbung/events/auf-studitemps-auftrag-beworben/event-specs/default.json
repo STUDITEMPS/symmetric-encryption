@@ -1,0 +1,15 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/bewerbung/auf-studitemps-auftrag-beworben",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:bewerbung:auf-studitemps-auftrag-beworben:8294e966-e293-428b-a3f0-001977588bd1",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:7294e966-e293-428b-a3f0-001977577cd8",
+  "occurred_at": "2020-03-17T07:18:58+01:00",
+  "caused_by": "tech.studitemps:bewerbung:apply:20373b81-5b8d-4cc3-a0c6-aa0151393493",
+  "correlates_with": "tech.studitemps:bewerbung:apply:20373b81-5b8d-4cc3-a0c6-aa0151393493",
+  "reicht_studitemps_bewerbung_ein": {
+    "student": "tech.studitemps:studentenverwaltung:student:7294e966-e293-428b-a3f0-001977577cd8",
+    "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:56789"
+  }
+}

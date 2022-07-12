@@ -1,0 +1,25 @@
+{
+	"@type": [
+		"https://studitemps.tech/specification/arbeitszeitbestaetigung/abweichende-arbeitszeit-von-unternehmen-erfasst",
+		"https://studitemps.tech/specification/domain-event"
+	],
+	"@id": "tech.studitemps:arbeitszeitbestaetigung:abweichende-arbeitszeit-von-unternehmen-erfasst:e7f4e458-3da6-427d-88e3-227bbad22062",
+	"caused_by": "tech.studitemps:arbeitszeitbestaetigung:abweichende-arbeitszeit-von-unternehmen-erfassen:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+	"correlates_with": "tech.studitemps:arbeitszeitbestaetigung:abweichende-arbeitszeit-von-unternehmen-erfassen:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+	"enacted_by": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:56b4e83c-40a5-493f-920a-e937cadf29e2",
+	"occurred_at": "2020-04-22T10:22:00+02:00",
+	"unreliable_debugging_data": {},
+	"erfasst_abweichende_arbeitszeit": {
+		"gegenbehauptung_zu": "tech.studitemps:studentenzeiterfassung:arbeitszeit:e7f4e458-3da6-427d-88e3-227bbad22062",
+		"@id": "tech.studitemps:arbeitszeitbestaetigung:arbeitszeit:f4715430-70b8-0136-1580-54e1ad118e9f",
+		"in_zeitraum": "2019-04-16T22:15:00+02:00/2019-04-17T06:00:00+02:00",
+		"enthielt_pausen": [
+			"2019-04-16T23:30:00+02:00/2019-04-16T23:45:00+02:00",
+			"2019-04-17T01:00:00+02:00/2019-04-17T01:10:00+02:00"
+		],
+		"gesamtpausendauer": "PT30M",
+		"von_student": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+		"in_auftrag": "tech.studitemps:auftragserstellung:auftrag:50032",
+		"in_schicht": "tech.studitemps:schichtplan:schicht:fffe43e8-3c21-11e9-a429-fbf0d0f1071c"
+	}
+}

@@ -1,0 +1,19 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/temping/student-unentschuldigt-gefehlt",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:temping:student-unentschuldigt-gefehlt:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:temping:add-no-show:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "correlates_with": "tech.studitemps:temping:add-no-show:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+    "occurred_at": "2019-08-18T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "dokumentiert_unentschuldigtes_fehlen": {
+        "student": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+        "auftrag": "tech.studitemps:auftragserstellung:auftrag:50042",
+        "schicht": "tech.studitemps:schichtplan:schicht:fffe43e8-3c21-11e9-a429-fbf0d0f1071c",
+        "zeitraum": "2019-08-08T16:00:00+02:00/2019-08-08T23:00:00+02:00",
+        "stunden": "PT6H30M"
+    }
+}

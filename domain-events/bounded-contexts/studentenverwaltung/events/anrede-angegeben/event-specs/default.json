@@ -1,0 +1,16 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/anrede-angegeben",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:anrede-angegeben:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "caused_by": "tech.studitemps:studentenverwaltung:anrede-angegeben:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "correlates_with": "tech.studitemps:studentenverwaltung:anrede-angegeben:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "gibt_anrede_an": {
+    "fuer_student": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+    "anrede_pruefsumme": "221d26dc16fce1da1ff61c8f485e9cf82b10001d"
+  }
+}

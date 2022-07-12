@@ -1,0 +1,21 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/kandidatenprofil/weitere-eigenschaften-gefordert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:kandidatenprofil:weitere-eigenschaften-gefordert:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:candidate-profile:define-student-trait-requirements:2fb6db19-f4af-4807-999b-5df0ca3970bc",
+  "correlates_with": "tech.studitemps:candidate-profile:define-student-trait-requirements:2fb6db19-f4af-4807-999b-5df0ca3970bc",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+  "occurred_at": "2019-01-15T15:00:00+01:00",
+  "unreliable_debugging_data": {},
+  "fordert_weitere_eigenschaften": {
+    "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50042",
+    "weitere_eigenschaften": [
+      "tech.studitemps:eigenschaft:koerperliche-belastbarkeit",
+      "tech.studitemps:eigenschaft:sicherheitsschuhe",
+      "tech.studitemps:eigenschaft:handwerkliche-begabung",
+      "tech.studitemps:eigenschaft:staplerschein"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/sprachkenntnis-geaendert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:sprachkenntnis-geaendert:691345c1-6116-4d68-bdd1-ce7035ebdbf4",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:30bc3e19-05f1-49bf-85c0-973760534842",
+  "occurred_at": "2020-11-05T07:33:40+02:00",
+  "caused_by": "tech.studitemps:studentenverwaltung:change-language-skill:508b5268-67ad-463a-af4d-dc095cdb30ae",
+  "correlates_with": "tech.studitemps:studentenverwaltung:change-language-skill:508b5268-67ad-463a-af4d-dc095cdb30ae",
+  "aendert_sprachkenntnis": {
+    "fuer_student": "tech.studitemps:studentenverwaltung:student:30bc3e19-05f1-49bf-85c0-973760534842",
+    "sprache": "tech.studitemps:sprachen:iso639-1:de",
+    "niveau": "tech.studitemps:sprachen:niveau:muttersprache"
+  }
+}

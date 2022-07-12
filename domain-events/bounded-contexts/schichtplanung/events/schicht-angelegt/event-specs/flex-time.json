@@ -1,0 +1,19 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/schichtplanung/schicht-angelegt",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:schichtplanung:schicht-angelegt:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:shift-planning:create-shift:09fe1bb3-d945-4ab4-a157-258a854aaaf9",
+    "correlates_with": "tech.studitemps:shift-planning:create-shift:09fe1bb3-d945-4ab4-a157-258a854aaaf9",
+    "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:max.mustermann@studitemps.de",
+    "occurred_at": "2019-04-18T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "legt_schicht_an": {
+        "@id": "tech.studitemps:schichtplan:flextime:fffe43e8-3c21-11e9-a429-fbf0d0f1071c",
+        "in_auftrag": "tech.studitemps:auftragserstellung:auftrag:50042",
+        "zeitraum": "2019-08-08/2019-08-10",
+        "anzahl_benoetigter_studenten": 6,
+        "netto_arbeitszeit": "PT12H"
+    }
+}

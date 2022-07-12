@@ -1,0 +1,17 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/assessment/sprachkenntnis-bewertet",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:assessment:sprachkenntnis-bewertet:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:assessment:assess-language:65e7938e-5341-4deb-ac95-5b1417d5f598",
+  "correlates_with": "tech.studitemps:assessment:assess-language:65e7938e-5341-4deb-ac95-5b1417d5f598",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:max.mustermann@studitemps.de",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "bewertet_sprachkenntnis": {
+    "student": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+    "sprache": "tech.studitemps:sprachen:iso639-1:de",
+    "niveau": "tech.studitemps:sprachen:niveau:muttersprache"
+  }
+}

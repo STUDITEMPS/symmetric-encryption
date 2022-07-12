@@ -1,0 +1,16 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/auftragskonfiguration/zeiterfassungsart-festgelegt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:auftragskonfiguration:zeiterfassungsart-festgelegt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:order-configuration:define-timetracking-contact:2fb6db19-f4af-4807-999b-5df0ca3970bc",
+  "correlates_with": "tech.studitemps:order-configuration:define-timetracking-contact:2fb6db19-f4af-4807-999b-5df0ca3970bc",
+  "enacted_by": "tech.studitemps:auftragskonfiguration:temping-mitarbeiter:48878a54-5af8-4106-983b-87522f5eb3c9",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "legt_zeiterfassungsart_fest": {
+    "@type": "tech.studitemps:auftragskonfiguration:zeiterfassungsart:studentenzeiterfassung",
+    "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50000"
+  }
+}

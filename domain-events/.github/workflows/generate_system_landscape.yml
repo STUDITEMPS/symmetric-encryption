@@ -1,0 +1,30 @@
+name: "Generate system landscape"
+on:
+  schedule:
+    - cron: "42 4 * * *"
+
+jobs:
+  generate-system-landscape:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    env:
+      RABBITMQ_URL: ${{ secrets.RABBITMQ_URL }}
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+    - uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+        ruby-version: 3.1.2
+    - uses: ts-graphviz/setup-graphviz@v1
+    - run: bin/build_system_landscape
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        file_pattern: docs/system_landscape/*.*
+        commit_message: "[Update] Automatic System Landscape"
+        commit_user_name: "github-actions[bot]"
+        commit_user_email: "github-actions[bot]@users.noreply.github.com"
+        commit_author: Github Actions [Bot] <github-actions[bot]@users.noreply.github.com>
+

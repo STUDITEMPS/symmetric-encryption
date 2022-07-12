@@ -1,0 +1,22 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/jobmensa-account-verknuepft",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:jobmensa-account-verknuepft:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "caused_by": "tech.studitemps:studentenverwaltung:jobmensa-account-verknuepft:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "correlates_with": "tech.studitemps:studentenverwaltung:jobmensa-account-verknuepft:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "verknuepft_jobmensa_account": {
+    "student": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+    "jobmensa_student": "de.jobmensa:studentenverwaltung:student:7294e966-e293-428b-a3f0-001977577cd8",
+    "email_adresse": "test@student.de"
+  },
+  "pii": {
+    "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e": [
+      "$.verknuepft_jobmensa_account.email_adresse"
+    ]
+  }
+}

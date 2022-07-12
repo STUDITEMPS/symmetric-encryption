@@ -1,0 +1,15 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/assessment/student-nicht-fuer-studitemps-geeignet",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:assessment:student-nicht-fuer-studitemps-geeignet:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:assessment:deny-student-studitemps-suitability:65e7938e-5341-4deb-ac95-5b1417d5f598",
+  "correlates_with": "tech.studitemps:assessment:deny-student-studitemps-suitability:65e7938e-5341-4deb-ac95-5b1417d5f598",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:max.mustermann@studitemps.de",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "verneint_eignung_von_student_fuer_studitemps": {
+    "@id": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e"
+  }
+}

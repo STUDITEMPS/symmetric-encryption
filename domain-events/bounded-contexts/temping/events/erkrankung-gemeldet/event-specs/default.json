@@ -1,0 +1,17 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/temping/erkrankung-gemeldet",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:temping:erkrankung-gemeldet:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:temping:add-sick-leave:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "correlates_with": "tech.studitemps:temping:add-sick-leave:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+    "occurred_at": "2019-04-18T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "meldet_erkrankung": {
+        "durch_studitemps_mitarbeiter": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+        "von_student": "tech.studitemps:studentenverwaltung:student:78bhg430-97df-0136-1580-54e1ad118e9f",
+        "fuer_zeitraum": "2019-04-22/2019-04-28"
+    }
+}

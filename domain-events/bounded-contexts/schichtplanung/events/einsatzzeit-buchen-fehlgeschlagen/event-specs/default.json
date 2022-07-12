@@ -1,0 +1,19 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/schichtplanung/einsatzzeit-buchen-fehlgeschlagen",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:schichtplanung:einsatzzeit-buchen-fehlgeschlagen:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:shift-planning:create-shift:09fe1bb3-d945-4ab4-a157-258a854aaaf9",
+    "correlates_with": "tech.studitemps:schichtplanung:buche-einsatzzeit:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "enacted_by": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+    "occurred_at": "2019-04-18T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "kann_einsatzzeit_nicht_buchen": {
+        "in_auftrag": "tech.studitemps:auftragserstellung:auftrag:50042",
+        "gruende": [
+            "tech.studitemps:schichtplanung:einsatzzeit-buchen-fehlgeschlagen-grund:arbeitszeitverstoss",
+            "tech.studitemps:schichtplanung:einsatzzeit-buchen-fehlgeschlagen-grund:pausenzeitverstoss"
+        ]
+    }
+}

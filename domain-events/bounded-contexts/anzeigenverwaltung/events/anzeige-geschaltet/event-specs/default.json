@@ -1,0 +1,77 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/anzeigenverwaltung/anzeige-geschaltet",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:anzeigenverwaltung:anzeige-geschaltet:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": null,
+    "correlates_with": null,
+    "enacted_by": "tech.studitemps:temping:recrutier:<uuid>",
+    "occurred_at": "2019-07-15T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "schaltet-anzeige": {
+        "@type": "tech.studitemps:anzeigenverwaltung:anzeige",
+        "@id": "tech.studitemps:anzeigenverwaltung:anzeige:e866bcf6-2d9e-4414-a495-7d6204b9f217",
+        "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50070",
+        "titel": "Anzeigenschaltungsbeauftragter (m/w/d)",
+        "einleitung": "Hier ist die Einleitung zur Stelle",
+        "jobteaser": "Und hier der Teasersatz",
+        "aufgaben": [
+          "Kisten heben",
+          "Kisten fallenlassen",
+          "Kisten wieder aufheben"
+        ],
+        "profil": [
+          "Du bist gut im Heben",
+          "Du sprichst fließend kirgisisch",
+          "Du hast ein Gesundheitszeugnis"
+        ],
+        "eckdaten": [
+          "Eingang ist um die Ecke",
+          "Bezahlte Schulung vorab",
+          "Gratis Milch in der Pause"
+        ],
+        "schlusssatz": "Hier steht der Schlusssatz",
+        "taetigkeitsprofil": {
+          "@id": "tech.studitemps:daisy:taetigkeit:9e14de81-a7ba-4e07-a7d7-7f3ac0670746",
+          "name": "Küchenaushilfe"
+        },
+        "stundenlohn_in_cent": 1250,
+        "laeuft_bis": "2019-07-25T10:00:00+02:00",
+        "einsatzort": {
+          "@type": "tech.studitemps:stellenprofil:einsatzort",
+          "plz": "50670",
+          "stadt": "Köln",
+          "strasse": "Im Mediapark",
+          "hausnummer": "4a",
+          "bundesland": "Nordrhein-Westfalen",
+          "land": "Deutschland",
+          "latitude": 50.9497351,
+          "longitude": 6.943474399999999
+        },
+        "ansprechpartner": {
+          "@id": "tech.studitemps:identity:studitempsmitarbeiter:hicran.biersbach@studitemps.de",
+          "vorname": "Hicran",
+          "nachname": "Biersbach",
+          "email": "hicran.biersbach@studitemps.de",
+          "google_id": "110941747530154130744"
+        },
+        "standort": {
+          "@id": "tech.studitemps:daisy:office:b83261f7-6a04-4f6b-8575-3a99606f63d8",
+          "strasse": "Salierring 47-53",
+          "plz": "50677",
+          "stadt": "Köln"
+        },
+        "sprachanforderungen": [
+          {
+            "sprache": "tech.studitemps:sprachen:iso639-1:de",
+            "niveau": "tech.studitemps:sprachen:niveau:muttersprache"
+          },
+          {
+            "sprache": "tech.studitemps:sprachen:iso639-1:en",
+            "niveau": "tech.studitemps:sprachen:niveau:anfaenger"
+          }
+        ],
+        "wochenstunden": "PT16H/PT20H30M"
+    }
+}

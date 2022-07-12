@@ -1,0 +1,14 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/freigabe/arbeitszeit-geloescht",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:freigabe:arbeitszeit-geloescht:89ea3a58-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:freigabe:arbeitszeit-loeschen:8f6090e4-9f37-4802-96c0-f82b7fa2fb97",
+  "correlates_with": "tech.studitemps:freigabe:arbeitszeit-loeschen:8f6090e4-9f37-4802-96c0-f82b7fa2fb97",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:timie.tester@studitemps.de",
+  "occurred_at": "2019-03-06T20:18:31.735604+01:00",
+  "loescht_arbeitszeit": {
+    "@id": "tech.studitemps:studentenzeiterfassung:arbeitszeit:f4715430-70b8-0136-1580-54e1ad118e9f"
+  }
+}

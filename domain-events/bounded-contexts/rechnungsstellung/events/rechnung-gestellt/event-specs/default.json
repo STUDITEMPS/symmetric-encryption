@@ -1,0 +1,22 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/rechnungsstellung/rechnung-gestellt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:rechnungsstellung:rechnung-gestellt:f8e43458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:rechnungsstellung:rechnungslauf-gestartet:c0c6b4cb-6313-4494-abc2-0c1367fdc45c",
+  "correlates_with": "tech.studitemps:rechnungsstellung:rechnungslauf-gestartet:c0c6b4cb-6313-4494-abc2-0c1367fdc45c",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:faktura.mitarbeiter@studitemps.de",
+  "occurred_at": "2022-04-01T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "stellt_rechnung": {
+    "@id": "tech.studitemps:rechnungsstellung:rechnung:2022-000001",
+    "fuer_auftrag": "tech.studitemps:personalbestellung:auftrag:1000000",
+    "am_tag": "2022-04-01",
+    "mit_faelligkeit": "2022-04-15",
+    "mit_zahlbetrag_in_cent": 131753,
+    "an_leistungsempfaenger": "tech.studitemps:kundenverwaltung:kunde:967049f6-1339-4aef-a91f-6b0d72bdf35e",
+    "ueber_abrechnungszeitraum": "2022-03-01T00:00:00+01:00/2022-03-31T23:59:59+02:00",
+    "als_dokument": "https://studitemps-tech.s3.eu-central-1.amazonaws.com/tech.studitemps:rechnungsstellung:debitor:50000/2022-000001.pdf"
+  }
+}

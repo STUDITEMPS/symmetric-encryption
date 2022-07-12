@@ -1,0 +1,36 @@
+# ⚠️ Deprecated
+
+Das [ArbeitszeitFuerBillingFreigegeben](README.md) Event wird durch das Library Event [ArbeitszeitErfasst](../arbeitszeit-erfasst/README.md) abgelöst. Es handelt sich hierbei hauptsächlich um eine Umbenennung. Lediglich die Gesamtpausendauer wurde bei dieser Gelegenheit von einem Float zu einer ISO Duration umgewandelt.
+
+## Arbeitszeit für Billing freigegeben
+
+## Bounded Kontext
+
+Die _Freigabe_ produziert das Event, sobald die Bestätigung der Arbeitszeit vom Unternehmen erfolgt ist oder wenn die
+Arbeitszeiten direkt von Timies erfasst wurden (z. B. bei Anpassungen oder bei der Zeiterfassungsart
+__Unternehmenszeiterfassung__).
+
+## Feldname
+
+`gibt_arbeitszeit_frei`
+
+## Felder von `gibt_arbeitszeit_frei`
+
+| Name | Typ  | Pflichtfeld  | Beschreibung  |
+|---|---|---|---|
+| `@id`  | [URI](https://tools.ietf.org/html/rfc3986)  | Pflicht  | Global eindeutige Identifikation der Arbeitszeit. |
+| `fand_im_auftrag_statt`  | [URI](https://tools.ietf.org/html/rfc3986) | Pflicht  | Global eindeutige Identifikation des Auftrags. |
+| `geleistet_von`  | [URI](https://tools.ietf.org/html/rfc3986) | Pflicht  | Global eindeutige Identifikation des Studenten. |
+| `fand_im_intervall_statt`  | [ISO8601 Interval](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals) | Pflicht  | Gibt Start und Ende der Arbeitszeit an. Enthält Datum und sekundengenaue Uhrzeit mit Zeitzone Offset getrennt durch ein `/`|
+| `enthielt_pausen`  | Liste aus [ISO 8601 Intervallen](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals) | Optional  | Beliebig viele Pausen während der Arbeitszeit. Format siehe fand_im_interval_statt. **Achtung:** nur enthalten, wenn die genaue Verortung der Pausen bekannt ist.|
+| `hatte_gesamtpausendauer_in_stunden_von`  | Float | Optional  | Gesamtdauer aller Pausen, die innerhalb der Arbeitszeit stattfanden. **Achtung:** nur enthalten, wenn die genaue Verortung der Pausen unbekannt ist. |
+| `initial_erfasste_arbeitszeit` | [URI](https://tools.ietf.org/html/rfc3986)  | Pflicht | Durch bestimmte Prozesse, wie Anpassungen von Timies oder Reklamationen, kann es vorkommen, das wir eine komplett andere Arbeitszeit freigeben, als die, die initial vom Arbeitnehmer eingetragen wurde. Damit andere Systeme aber nachvollziehen können, zu welcher ursprünglichen Arbeitszeit diese freigegebene Arbeitszeit in Beziehung steht, wird die ID dieser initial erfassten Arbeitszeit hier angegeben. Gab es keine Anpassungen an der Arbeitszeit, ist die ID der initial erfassten Arbeitszeit gleich dem `@id` Feld. |
+
+
+Es wird grundsätzlich die deutsche Zeitzone angenommen.
+
+## Transport über RabbmitMQ
+
+| Routing Key  | Exchange  |
+|---|---|
+| `freigabe.arbeitszeit-fuer-billing-freigegeben` | `freigabe`  |

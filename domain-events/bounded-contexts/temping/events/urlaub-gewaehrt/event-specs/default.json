@@ -1,0 +1,18 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/temping/urlaub-gewaehrt",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:temping:urlaub-gewaehrt:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:temping:add-holiday:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "correlates_with": "tech.studitemps:temping:add-holiday:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+    "occurred_at": "2020-01-18T10:00:00+01:00",
+    "unreliable_debugging_data": {},
+    "gewaehrt_urlaub": {
+        "recruiter": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+        "fuer_student": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+        "in_zeitraum": "2020-01-22/2020-01-28",
+        "auszuzahlende_urlaubstage": 5
+    }
+}

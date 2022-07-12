@@ -1,0 +1,16 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/schichtplanung/student-zur-disponierung-vorgesehen",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:schichtplanung:student-zur-disponierung-vorgesehen:16ab1658-92d9-421c-a68d-ccb42eefa73b",
+  "caused_by": "tech.studitemps:shift-scheduling:intend-student-for-scheduling:ce57fe16-695c-4233-b701-f7fe07df497e",
+  "correlates_with": "tech.studitemps:shift-scheduling:intend-student-for-scheduling:ce57fe16-695c-4233-b701-f7fe07df497e",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "sieht_student_zur_disponierung_vor": {
+    "student": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+    "in_auftrag": "tech.studitemps:auftragserstellung:auftrag:50042"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/sprachkenntnis-entfernt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:sprachkenntnis-entfernt:2b6d75ba-949a-4f70-9723-41973991b9e1",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:30bc3e19-05f1-49bf-85c0-973760534842",
+  "occurred_at": "2020-11-05T07:33:40+02:00",
+  "caused_by": "tech.studitemps:studentenverwaltung:remove-language-skill:6f183ccd-4928-4b47-80dd-1c6816f1e75",
+  "correlates_with": "tech.studitemps:studentenverwaltung:remove-language-skill:6f183ccd-4928-4b47-80dd-1c6816f1e75",
+  "entfernt_sprachkenntnis": {
+    "fuer_student": "tech.studitemps:studentenverwaltung:student:30bc3e19-05f1-49bf-85c0-973760534842",
+    "sprache": "tech.studitemps:sprachen:iso639-1:de"
+  }
+}

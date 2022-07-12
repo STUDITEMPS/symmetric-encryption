@@ -1,0 +1,19 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/vertragsverwaltung/self-service-auev-fuer-elektronische-signatur-freigegeben",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:vertragsverwaltung:self-service-auev-fuer-elektronische-signatur-freigegeben:18b4e6f1-788d-4633-b04a-e8e1177c9357",
+  "caused_by": "tech.studitemps:vertragsverwaltung:self-service-auev-fuer-elektronische-signatur-freigegeben:92965ce1-3a06-480a-a904-b876a1c25400",
+  "correlates_with": "tech.studitemps:personalbestellung:bestellung-aufgegeben:5f3a28a0-5db7-4b1d-b026-4758e6fe2b38",
+  "enacted_by": "tech.studitemps:vertragsverwaltung",
+  "occurred_at": "2021-09-11T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "gibt_self_service_auev_fuer_elektronische_signatur_frei": {
+    "@id": "tech.studitemps:vertragsverwaltung:self-service-auev:cbc0706d-590f-4db9-810c-872a75f37985",
+    "vertragsnummer": "1000-0001",
+    "kunde": "tech.studitemps:kundenverwaltung:kunde:967049f6-1339-4aef-a91f-6b0d72bdf35e",
+    "filiale": "tech.studitemps:kundenverwaltung:filiale:76549f6-1339-4aef-a91f-6b0d72dwas5e",
+    "fuer_bestellung": "tech.studitemps:personalbestellung:bestellung:1000"
+  }
+}

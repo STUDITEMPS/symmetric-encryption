@@ -1,0 +1,29 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/studentenstammdaten/berufserfahrung-angegeben",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:studentenstammdaten:berufserfahrung-angegeben:2eea81ea-586f-474b-82c0-7b21149e0106",
+    "caused_by": "tech.studitemps:studentenstammdaten:berufserfahrung-angegeben:2eea81ea-586f-474b-82c0-7b21149e0106",
+    "correlates_with": "tech.studitemps:studentenstammdaten:berufserfahrung-angegeben:2eea81ea-586f-474b-82c0-7b21149e0106",
+    "enacted_by": "tech.studitemps:studentenverwaltung:student:a40ff071-9bc0-4dd2-a56b-98bfd0d7d000",
+    "occurred_at": "2021-11-10T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "gibt_berufserfahrung_an": {
+        "student": "tech.studitemps:studentenverwaltung:student:a40ff071-9bc0-4dd2-a56b-98bfd0d7d000",
+        "berufserfahrung": [
+            {
+                "taetigkeit": "Koch",
+                "arbeitgeber": "Dönerbude",
+                "start": "2019-06",
+                "ende": "2020-01"
+            },
+            {
+                "taetigkeit": "Bademeister",
+                "arbeitgeber": "Schwimmbad",
+                "start": "2021-01",
+                "ende": null
+            }
+        ]
+    }
+}

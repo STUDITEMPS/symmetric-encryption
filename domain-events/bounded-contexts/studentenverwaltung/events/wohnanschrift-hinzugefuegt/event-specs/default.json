@@ -1,0 +1,31 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/wohnanschrift-korrigiert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:wohnanschrift-korrigiert:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "caused_by": "tech.studitemps:studentenverwaltung:change-address:f8580bc9-d3ec-4455-99e6-6f301b8c6a8b",
+  "correlates_with": "tech.studitemps:studentenverwaltung:change-address:f8580bc9-d3ec-4455-99e6-6f301b8c6a8b",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+  "occurred_at": "2020-08-07T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "pii": {
+    "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e": [
+      "$.fuegt_wohnanschrift_hinzu.wohnanschrift"
+    ]
+  },
+  "fuegt_wohnanschrift_hinzu": {
+    "fuer_student": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+    "wohnanschrift": {
+      "plz": "50670",
+      "stadt": "Köln",
+      "strasse": "Im Mediapark",
+      "hausnummer": "4a",
+      "addition": "Studitemps GmbH",
+      "bundesland": "Nordrhein-Westfalen",
+      "land": "Deutschland",
+      "latitude": 50.9497351,
+      "longitude": 6.943474399999999
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenanstellung/langzeitvertrag-durch-student-gekuendigt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenanstellung:langzeitvertrag-durch-student-gekuendigt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:contracts:request-long-term-contract-termination:348bcfbc-863f-417e-a06c-2e96e2cfd571",
+  "correlates_with": "tech.studitemps:contracts:request-long-term-contract-termination:348bcfbc-863f-417e-a06c-2e96e2cfd571",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "dokumentiert_langzeitvertrag_gekuendigt": {
+    "@id": "tech.studitemps:studentenanstellung:langzeitvertrag:cl/200234/1",
+    "gekuendigt_zum": "2019-04-18",
+    "kuendigungsgrund": "Ordentliche Kündigung",
+    "student": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804"
+  }
+}

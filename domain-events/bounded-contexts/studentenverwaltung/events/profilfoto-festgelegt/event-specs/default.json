@@ -1,0 +1,16 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/profilfoto-festgelegt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:profilfoto-festgelegt:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "caused_by": "tech.studitemps:studentenverwaltung:profilfoto-festgelegt:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "correlates_with": "tech.studitemps:studentenverwaltung:profilfoto-festgelegt:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "legt_profilfoto_fest": {
+    "fuer_student": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+    "url": "https://d1k23cd67m8k8k.cloudfront.net/attachments/635104bbe4d4b6c87fba2843f6e6f0b8d70b856a/store/limit/200/200/260a05ee4e758bd7e1af4b3da9c9f4297b7c59d3dbc31d505f0de4ac11e9/American-psycho-patrick-bateman.jpg"
+  }
+}

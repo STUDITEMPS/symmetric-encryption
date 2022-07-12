@@ -1,0 +1,15 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/auftragskonfiguration/auftrag-markiert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:auftragskonfiguration:auftrag-markiert:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:orders:flagged:1a37f142-97a4-4397-9960-3ab29fac8fb8",
+  "correlates_with": "tech.studitemps:orders:flagged:1a37f142-97a4-4397-9960-3ab29fac8fb8",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+  "occurred_at": "2019-02-15T15:00:00+01:00",
+  "unreliable_debugging_data": {},
+  "markiert_auftrag": {
+    "auftrag": "tech.studitemps:auftragserstellung:auftrag:50042"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/rechnungsstellung/arbeitnehmerdaten-benoetigt",
+    "https://studitemps.tech/specification/request-event"
+  ],
+  "@id": "tech.studitemps:rechnungsstellung:arbeitnehmerdaten-benoetigt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "enacted_by": "tech.studitemps:rechnungsstellung:faktura-mitarbeiter:48878a54-5af8-4106-983b-87522f5eb3c9",
+  "correlates_with": "tech.studitemps:rechnungsstellung:arbeitszeit-erfasst:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "arbeitnehmerdaten_benoetigt": {
+    "fuer_arbeitnehmer": "tech.studitemps:studentenverwaltung:student:94dbedc0-1029-495b-be76-24b8d97b6301",
+    "benoetigte_daten": {
+      "vorname": "string",
+      "nachname": "string",
+      "personalnummer": "string"
+    }
+  },
+  "reply": {
+    "exchange": "rechnungsstellung",
+    "routing_key": "timetracking.arbeitnehmerdaten-fuer-arbeitszeit",
+    "metadata": {
+      "arbeitszeit_id": "tech.studitemps.time-tracking.arbeitszeit:f680fb77-20fc-434b-8e85-e3dba4023305"
+    }
+  }
+}

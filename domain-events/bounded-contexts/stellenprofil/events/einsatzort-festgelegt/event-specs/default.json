@@ -1,0 +1,23 @@
+{
+    "@type": [
+      "https://studitemps.tech/specification/stellenprofil/einsatzort-festgelegt",
+      "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:stellenprofil:einsatzort-festgelegt:5330fdf8-69d2-41b2-bcd8-6f145b85799a",
+    "caused_by": "tech.studitemps:auftragserstellung:define-job-site:3887f728-dd38-4815-9d9b-cec1481755a7",
+    "correlates_with": "tech.studitemps:auftragserstellung:define-job-site:3887f728-dd38-4815-9d9b-cec1481755a7",
+    "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+    "occurred_at": "2018-12-13T08:36:35+01:00",
+    "legt_einsatzort_fest": {
+      "@type": "tech.studitemps:stellenprofil:einsatzort",
+      "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50036",
+      "plz": "50670",
+      "stadt": "Köln",
+      "strasse": "Im Mediapark",
+      "hausnummer": "4a",
+      "bundesland": "Nordrhein-Westfalen",
+      "land": "Deutschland",
+      "latitude": 50.9497351,
+      "longitude": 6.943474399999999
+    }
+  }

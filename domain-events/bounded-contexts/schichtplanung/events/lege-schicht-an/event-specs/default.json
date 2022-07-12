@@ -1,0 +1,19 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/schichtplanung/lege-schicht-an",
+        "https://studitemps.tech/specification/domain-command"
+    ],
+    "@id": "tech.studitemps:schichtplanung:lege-schicht-an:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:schichtbestellung:create-shift:09fe1bb3-d945-4ab4-a157-258a854aaaf9",
+    "correlates_with": "tech.studitemps:schichtbestellung:create-shift:09fe1bb3-d945-4ab4-a157-258a854aaaf9",
+    "enacted_by": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:94dbedc0-1029-495b-be76-24b8d97b6301",
+    "occurred_at": "2019-04-18T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "legt_schicht_an": {
+        "in_auftrag": "tech.studitemps:auftragserstellung:auftrag:50042",
+        "zeitraum": "2019-08-08T16:00:00+02:00/2019-08-08T23:00:00+02:00",
+        "anzahl_benoetigter_studenten": 6,
+        "netto_arbeitszeit": "PT6H30M",
+        "pause": "PT30M"
+    }
+}

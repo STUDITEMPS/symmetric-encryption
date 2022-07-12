@@ -1,0 +1,16 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/ueber-mich-text-geaendert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:ueber-mich-text-geaendert:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "caused_by": "tech.studitemps:studentenverwaltung:change-about-me-text:f8580bc9-d3ec-4455-99e6-6f301b8c6a8b",
+  "correlates_with": "tech.studitemps:studentenverwaltung:change-about-me-text:f8580bc9-d3ec-4455-99e6-6f301b8c6a8b",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "aendert_text": {
+    "fuer_student": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+    "ueber_mich": "Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans."
+  }
+}

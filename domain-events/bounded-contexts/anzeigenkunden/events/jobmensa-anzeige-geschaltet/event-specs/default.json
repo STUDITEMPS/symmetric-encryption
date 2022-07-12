@@ -1,0 +1,65 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/anzeigenkunden/jobmensa-anzeige-geschaltet",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:anzeigenkunden:jobmensa-anzeige-geschaltet:7294e966-e293-428b-a3f0-001977588bd1",
+  "enacted_by": "tech.studitemps:anzeigenkunden:unternehmen:cbd08a3f-4542-4d5e-8511-e3a192bb290d",
+  "occurred_at": "2020-03-17T07:18:58+01:00",
+  "caused_by": "tech.studitemps:anzeigenkunden:place-job-offer:593db5d9-8405-40ac-8eba-f35a86520c73",
+  "correlates_with": "tech.studitemps:anzeigenkunden:place-job-offer:593db5d9-8405-40ac-8eba-f35a86520c73",
+  "pii": {
+    "tech.studitemps:anzeigenkunden:unternehmen:cbd08a3f-4542-4d5e-8511-e3a192bb290d": [
+      "$.schaltet_jobmensa_anzeige.bewerbungsziel",
+      "$.schaltet_jobmensa_anzeige.einsatzort"
+    ]
+  },
+  "schaltet_jobmensa_anzeige": {
+    "@id": "tech.studitemps:anzeigenkunden:jobmensa-anzeige:e866bcf6-2d9e-4414-a495-7d6204b9f217",
+    "titel": "Anzeigenschaltungsbeauftragter (m/w/d)",
+    "taetigkeitsbereich": "tech.studitemps:anzeigenkunden:taetigkeitsbereich:b9367d79-8ea3-4623-892d-4e878c191ae7",
+    "anforderungen": [
+      {
+        "anforderung": "tech.studitemps:anzeigenkunden:jobanforderung:6e0f84cf-395d-4270-a45f-88ecfcc4e7eb",
+        "wird_benoetigt": true
+      },
+      {
+        "anforderung": "tech.studitemps:anzeigenkunden:jobanforderung:be33e04f-9d14-4ecb-8d7f-a8fc3d90a5b2",
+        "wird_benoetigt": false
+      },
+      {
+        "anforderung": "tech.studitemps:anzeigenkunden:jobanforderung:8aa48235-3028-4b08-b5c6-c03b1f6a4e62",
+        "wird_benoetigt": true
+      },
+      {
+        "anforderung": "tech.studitemps:anzeigenkunden:jobanforderung:2f612dab-b6af-4168-8334-cf91a62fbc32",
+        "wird_benoetigt": false
+      },
+      {
+        "anforderung": "tech.studitemps:anzeigenkunden:jobanforderung:3060e3f2-4ff6-4b45-8c54-9ebc38cc4bb0",
+        "wird_benoetigt": true
+      }
+    ],
+    "jobbeschreibung": "Du schaltest Anzeigen. Ganz viele. Die ganze Zeit.",
+    "einsatzzeiten": {
+      "einsatzstart": "2020-10-27",
+      "einsatz_startet_sofort": false,
+      "einsatzende": null,
+      "einsatzende_ist_unbefristet": true
+    },
+    "stellenanzahl": 3,
+    "minimum_wochenstunden": "PT8H",
+    "maximum_wochenstunden": "PT20H",
+    "stundenlohn": 1200,
+    "einsatzort": {
+      "strasse": "Hauptstraße",
+      "hausnummer": "27",
+      "plz": "30569",
+      "ort": "Bad Foobar",
+      "latitude": 5.4982374,
+      "longitude": 32.3213127
+    },
+    "bewerbungsziel": "bewerbung@companygmbh.de",
+    "typ_bewerbungsziel": "mail"
+  }
+}

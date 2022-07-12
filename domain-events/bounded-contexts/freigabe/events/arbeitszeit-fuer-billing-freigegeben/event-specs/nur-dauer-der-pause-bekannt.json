@@ -1,0 +1,20 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/freigabe/arbeitszeit-fuer-billing-freigegeben",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:freigabe:arbeitszeit-fuer-billing-freigegeben:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:freigabe:arbeitszeit-fuer-billing-freigeben:a92d636d-9dbe-4925-b855-05e49e1cc569",
+  "correlates_with": "tech.studitemps:freigabe:arbeitszeit-fuer-billing-freigeben:a92d636d-9dbe-4925-b855-05e49e1cc569",
+  "enacted_by": "tech.studitemps:freigabe",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "gibt_arbeitszeit_frei": {
+    "@id": "tech.studitemps:freigabe:arbeitszeit:f4715430-70b8-0136-1580-54e1ad118e9f",
+    "geleistet_von": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+    "fand_im_auftrag_statt": "tech.studitemps:temping:auftrag:67855",
+    "fand_im_intervall_statt": "2019-04-16T22:00:00+02:00/2019-04-17T06:00:00+02:00",
+    "hatte_gesamtpausendauer_in_stunden_von": 1.2,
+    "initial_erfasste_arbeitszeit": "tech.studitemps:studentenzeiterfassung:arbeitszeit:a43875e6-e60a-46be-a330-d0b7609d34b8"
+  }
+}

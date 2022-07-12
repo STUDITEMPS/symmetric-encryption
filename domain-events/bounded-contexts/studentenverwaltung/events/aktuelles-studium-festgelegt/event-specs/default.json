@@ -1,0 +1,20 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/aktuelles-studium-festgelegt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:aktuelles-studium-festgelegt:ce9ed1ae-61d1-4ed6-9bf4-862ca430eeb1",
+  "caused_by": "tech.studitemps:studentenverwaltung:set-current-study:ce9ed1ae-61d1-4ed6-9bf4-862ca430eeb1",
+  "correlates_with": "tech.studitemps:studentenverwaltung:set-current-study:ce9ed1ae-61d1-4ed6-9bf4-862ca430eeb1",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:7b07e46d-6452-4d7f-ad6b-8ae6529b6d0a",
+  "occurred_at": "2020-11-12T10:00:00+02:00",
+  "legt_aktuelles_studium_fest": {
+    "student": "tech.studitemps:studentenverwaltung:student:7b07e46d-6452-4d7f-ad6b-8ae6529b6d0a",
+    "studiengang": "Dairy Science",
+    "beginn": "WS 2018",
+    "studienbereiche": [
+      "tech.studitemps:studentenverwaltung:studienbereich:16e0c0c5-a50a-454d-88c1-41efd09edb80",
+      "tech.studitemps:studentenverwaltung:studienbereich:95aa7fc5-8f70-4f2d-9f83-91741b0fb38e"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "@id": "tech.studitemps:auftragskonfiguration:einsatzinformationen-hinterlegt:8dc58878-a6d9-4948-a46a-b07ce802b3ee",
+  "@type": [
+    "https://studitemps.tech/specification/auftragskonfiguration/einsatzinformationen-hinterlegt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "caused_by": "tech.studitemps:order-configuration:assignment-notification-text-defined:273c66c6-3589-41e2-abcb-5f7e51260bf5",
+  "correlates_with": "tech.studitemps:order-configuration:define-assignment-notification-text:273c66c6-3589-41e2-abcb-5f7e51260bf5",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+  "occurred_at": "2020-07-27T16:00:04+02:00",
+  "hinterlegt_einsatzinformationen": {
+    "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50000",
+    "text_html": "<div><strong>So klappt die Zusammenarbeit mit jobvalley</strong>:</div><ul><li>&nbsp;Starte deine Schicht pünktlich und kommunizierte zuverlässig mit uns und dem Einsatzunternehmen.</li><li>&nbsp;Verspätungen meldest du rechtzeitig vor Schichtbeginn bei deinem Kundenunternehmen und Ansprechpartner bei jobvalley (Telefon oder eMail).&nbsp;</li><li>Eine Schichtabsage wegen Krankheit meldest du bestmöglich einen Werktag vorher, spätestens jedoch 2 Stunden vor Schichtbeginn beim Einsatzunternehmen und uns</li><li>&nbsp;Wie im Arbeitsvertrag nachzulesen gilt ab dem 1. Krankheitstag Attestpflicht per Mail an deinen jobvalley-Ansprechpartner&nbsp;</li><li>Eine Schichtabsage wegen privater oder universitärer Gründe meldest du spätestens drei Werktage vorher beim Einsatzunternehmen und uns.</li></ul><div><figure data-trix-attachment=\"{&quot;content&quot;:&quot;<hr>&quot;,&quot;contentType&quot;:&quot;application/vnd.trix.horizontal-rule.html&quot;}\" data-trix-content-type=\"application/vnd.trix.horizontal-rule.html\" class=\"attachment attachment--content\"><hr><figcaption class=\"attachment__caption\"></figcaption></figure><br>Schon gewusst? Aus Studitemps wird jobvalley. Für dich ändert sich nichts, außer dass unser Service für dich immer besser wird! <br>Besuche für weitere Informationen <a href=\"https://jobvalley.com\">jobvalley.com</a>. <br><br>Weiterhin möchten wir auf unsere Informationen &amp; Regeln zum Thema Covid-19 hinweisen. Diese findest du unter: <a href=\"https://jobvalley.com/de-de/covid19-infoseite\">jobvalley.com/de-de/covid19-infoseite</a></div>"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/freigabe/bestaetigung-fuer-arbeitszeit-von-unternehmen-angefordert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:freigabe:bestaetigung-fuer-arbeitszeit-von-unternehmen-angefordert:89ea3a58-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:studentenzeiterfassung:arbeitszeit-von-student-erfasst:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "correlates_with": "tech.studitemps:studentenzeiterfassung:arbeitszeit-von-student-erfasst:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "enacted_by": "tech.studitemps:identity:application:freigabe-app@studitemps.de",
+  "occurred_at": "2020-04-01T16:12:00+02:00",
+  "fordert_bestaetigung_fuer_arbeitszeit_von_unternehmen_an": {
+    "@id": "tech.studitemps:studentenzeiterfassung:arbeitszeit:f4715430-70b8-0136-1580-54e1ad118e9f",
+    "initial_erfasste_arbeitszeit": "tech.studitemps:studentenzeiterfassung:arbeitszeit:f4715430-70b8-0136-1580-54e1ad118e9f",
+    "fand_im_auftrag_statt": "tech.studitemps:auftragserstellung:auftrag:50000",
+    "geleistet_von": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+    "disponiert_in": "tech.studitemps:schichtplan:schicht:fffe43e8-3c21-11e9-a429-fbf0d0f1071c",
+    "fand_im_intervall_statt": "2020-04-01T08:00:00+02:00/2020-04-01T16:00:00+02:00",
+    "enthielt_pausen": [
+      "2020-04-01T12:00:00+02:00/2020-04-01T12:30:00+02:00"
+    ],
+    "hatte_gesamtpausendauer": "PT30M",
+    "mit_widerspruchsfrist": "2020-05-03T11:59:59+02:00"
+  }
+}

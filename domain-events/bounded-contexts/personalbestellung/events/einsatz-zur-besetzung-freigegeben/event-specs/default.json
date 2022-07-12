@@ -1,0 +1,39 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/personalbestellung/einsatz-zur-besetzung-freigegeben",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:personalbestellung:einsatz-zur-besetzung-freigegeben:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:vertragsverwaltung:self-service-auev-beidseitig-gezeichnet:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "correlates_with": "tech.studitemps:personalbestellung:bestellung-aufgegeben:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "enacted_by": "tech.studitemps:vertragsverwaltung",
+  "occurred_at": "2021-02-12T14:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "gibt_einsatz_zur_besetzung_frei": {
+    "@id": "tech.studitemps:personalbestellung:einsatz:f68e8b6c-4552-27ba-8ca3-1te4b485631r",
+    "kunde": "tech.studitemps:kundenverwaltung:kunde:967049f6-1339-4aef-a91f-6b0d72bdf35e",
+    "filiale": "tech.studitemps:kundenverwaltung:filiale:76549f6-1339-4aef-a91f-6b0d72dwas5e",
+    "bestellung": "tech.studitemps:personalbestellung:bestellung:1000",
+    "bestellt_von_kundenmitarbeiter": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:f68e8b6c-4562-47aa-8ca3-0ae4b775671e",
+    "freigegeben_um": "2021-02-12T14:00:00+02:00",
+    "einsatzort": {
+      "strasse": "Hornstraße",
+      "hausnummer": "2",
+      "plz": "50823",
+      "stadt": "Köln",
+      "bundesland": "Nordrhein-Westfalen"
+    },
+    "taetigkeit": { 
+      "taetigkeitsprofil": "tech.studitemps:taetigkeiten:verkaufshilfe", 
+      "individueller_name": "Ordnungsliebende*r Kistenwagenschieber*in" 
+    }, 
+    "einsatzzeit": {
+      "zeitraum": "2019-08-08T16:00:00+02:00/2019-08-08T23:00:00+02:00",
+      "netto_arbeitszeit": "PT6H30M",
+      "pause": "PT30M"
+    },
+    "anzahl_studenten": 3,
+    "verrechnungssatz_in_cent": 2200,
+    "stundenlohn_in_cent": 1100    
+  }
+}

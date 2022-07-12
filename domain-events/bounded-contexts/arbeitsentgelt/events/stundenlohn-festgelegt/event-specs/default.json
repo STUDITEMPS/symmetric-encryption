@@ -1,0 +1,12 @@
+{
+    "@type": [
+      "https://studitemps.tech/specification/arbeitsentgelt/stundenlohn-festgelegt",
+      "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:arbeitsentgelt:stundenlohn-festgelegt:4d0bd48d-9dc4-4d73-9708-970565af10aa",
+    "dokumentiert_stundenlohn": {
+      "hoehe_in_cent": 1233,
+      "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50036",
+      "gueltig_ab": "2018-12-13"
+    }
+  }

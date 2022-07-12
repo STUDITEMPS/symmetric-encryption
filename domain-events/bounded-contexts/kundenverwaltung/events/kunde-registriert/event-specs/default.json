@@ -1,0 +1,32 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/kundenverwaltung/kunde-registriert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:kundenverwaltung:kunde-registriert:17b4e83c-7005-493f-920a-e937ca3d09e2",
+  "caused_by": "tech.studitemps:kundenverwaltung:kunde-registrieren:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+  "correlates_with": "tech.studitemps:kundenverwaltung:kunde-registrieren:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+  "enacted_by": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:967049f6-1339-4aef-a91f-6b0d72bdf35e",
+  "occurred_at": "2020-04-18T10:01:00+02:00",
+  "unreliable_debugging_data": {},
+  "registriert_kunde": {
+    "@id": "tech.studitemps:kundenverwaltung:kunde:967049f6-1339-4aef-a91f-6b0d72bdf35e",
+    "firmierung": "Studitemps GmbH",
+    "vertragsadresse":
+      {
+        "plz": "32107",
+        "stadt": "Bad Salzuflen",
+        "strasse": "Schlossallee",
+        "hausnummer": "24"
+      },
+    "handelsregisternummer": "HRN 23425",
+    "amtsgericht": "Köln",
+    "kundenmitarbeiter": {
+      "@id": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:967049f6-1339-4aef-a91f-6b0d72bdf35e",
+      "anrede": "Frau",
+      "vorname": "Frieda",
+      "nachname": "Frings",
+      "email": "frieda.frings@fressnapf.de"
+    }
+  }
+}

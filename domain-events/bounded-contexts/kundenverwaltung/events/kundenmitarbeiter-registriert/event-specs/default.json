@@ -1,0 +1,19 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/kundenverwaltung/kundenmitarbeiter-registriert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:kundenverwaltung:kundenmitarbeiter-registriert:17b4e83c-7005-493f-920a-e937ca3d09e2",
+  "caused_by": "tech.studitemps:kundenverwaltung:kundenmitarbeiter-registrieren:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+  "correlates_with": "tech.studitemps:kundenverwaltung:kundenmitarbeiter-registrieren:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+  "occurred_at": "2020-04-18T10:01:00+02:00",
+  "unreliable_debugging_data": {},
+  "registriert_kundenmitarbeiter": {
+    "@id": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:967049f6-1339-4aef-a91f-6b0d72bdf35e",
+    "anrede": "Frau",
+    "vorname": "Frieda",
+    "nachname": "Frings",
+    "email": "frieda.frings@fressnapf.de"
+  }
+}

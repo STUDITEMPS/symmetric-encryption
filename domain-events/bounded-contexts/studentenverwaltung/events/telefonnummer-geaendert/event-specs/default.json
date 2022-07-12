@@ -1,0 +1,20 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/telefonnummer-geaendert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:telefonnummer-geaendert:da26c4b6-0ecc-4259-8dfe-4b9d4041950a",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:27b69448-e61d-49ef-b12f-1577b005580e",
+  "occurred_at": "2020-10-09T07:33:40+02:00",
+  "caused_by": "tech.studitemps:studentenverwaltung:change-phone-number:633c62a6-dfb8-4351-815a-18cf58dd2adc",
+  "correlates_with": "tech.studitemps:studentenverwaltung:change-phone-number:633c62a6-dfb8-4351-815a-18cf58dd2adc",
+  "pii": {
+    "tech.studitemps:studentenverwaltung:student:27b69448-e61d-49ef-b12f-1577b005580e": [
+      "$.aendert_telefonnummer.telefonnummer"
+    ]
+  },
+  "aendert_telefonnummer": {
+    "fuer_student": "tech.studitemps:studentenverwaltung:student:27b69448-e61d-49ef-b12f-1577b005580e",
+    "telefonnummer": "+49151234567890"
+  }
+}

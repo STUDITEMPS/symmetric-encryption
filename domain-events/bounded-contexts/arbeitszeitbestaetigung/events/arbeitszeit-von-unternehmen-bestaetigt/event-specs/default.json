@@ -1,0 +1,15 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/arbeitszeitbestaetigung/arbeitszeit-von-unternehmen-bestaetigt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:arbeitszeitbestaetigung:arbeitszeit-von-unternehmen-bestaetigt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:arbeitszeitbestaetigung:arbeitszeit-von-unternehmen-bestaetigen:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+  "correlates_with": "tech.studitemps:arbeitszeitbestaetigung:arbeitszeit-von-unternehmen-bestaetigen:aaaa6b0f-d852-4a24-9e99-d254b16fdb85",
+  "enacted_by": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:56b4e83c-40a5-493f-920a-e937cadf29e2",
+  "occurred_at": "2020-04-18T10:22:00+02:00",
+  "unreliable_debugging_data": {},
+  "bestaetigt_arbeitszeit": {
+    "@id": "tech.studitemps:studentenzeiterfassung:arbeitszeit:f4715430-70b8-0136-1580-54e1ad118e9f"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/anzeigenkunden/jobmensa-anzeige-veroeffentlicht",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:anzeigenkunden:jobmensa-anzeige-veroeffentlicht:d141c97f-0d45-4de3-a325-56012615ce95",
+  "enacted_by": "tech.studitemps:anzeigenkunden:kontakt:hendrik.gebhardt+company@studitemps.de",
+  "occurred_at": "2020-03-12T08:48:24+01:00",
+  "caused_by": "tech.studitemps:anzeigenkunden:jobmensa-anzeige-veroeffentlicht:d141c97f-0d45-4de3-a325-56012615ce95",
+  "correlates_with": "tech.studitemps:anzeigenkunden:jobmensa-anzeige-veroeffentlicht:d141c97f-0d45-4de3-a325-56012615ce95",
+  "veroeffentlicht_jobmensa_anzeige": {
+    "@id": "tech.studitemps:anzeigenkunden:jobmensa-anzeige:220781b4-12f4-4b3d-bbc9-875d5de71b8b",
+    "url": "https://www.jobmensa.de/jobs/144436-kanuguides-kundenbetreuer-innen-m-w-d-fuer-kanutouren-in-owl-bad-salzuflen",
+    "titel": "Kanuguides & Kundenbetreuer:innen (m/w/d) für Kanutouren in OWL",
+    "stellenbeschreibung": "<p>WIR HOLEN DICH INS BOOT!</p><p>Wir suchen<br><strong>Kanuguides und Kundenbetreuer:innen</strong><br>(m/w/d)<br>für Kanutouren in OWL</p><p>Für die Saison 2020 benötigen wir Unterstützung bei der Organisation von Kanutouren und Outdoorevents in der Region Ostwestfalen-Lippe. Unsere Programme richten sich an unterschiedliche Zielgruppen: Familien, Freundeskreise, Vereine, Betriebe, Schulklassen und Jugendgruppen. Unser Team realisiert zahlreiche Events mit und ohne Kanu, die mit touristischen Highlights der Region, pädagogischen Programmen oder anderen Freizeitaktivitäten kombiniert sind.</p><p>DU BRINGST MIT</p><ul>\n<li>Interesse an sportlichen Aktivitäten in der Natur</li>\n<li>Spaß am Umgang mit Menschen</li>\n<li>PKW - Führerschein</li>\n</ul><p>WIR BIETEN DIR</p><ul>\n<li>Ein umfassendes theoretisches und praktisches Schulungsprogramm</li>\n<li>Ein kurzfristiges Beschäftigungsverhältnis mit freier Terminplanung</li>\n<li>Mitarbeit in einem tollen Team!</li>\n</ul><p> </p><p>Wir freuen uns auf deine Bewerbung!</p>",
+    "veroeffentlicht_am": "2020-03-12T08:48:24+01:00",
+    "laeuft_ab_am": "2020-03-26T08:48:24+01:00",
+    "stundenlohn_in_cent": 1250,
+    "einsatzorte": [
+      {
+        "plz": "32107",
+        "stadt": "Bad Salzuflen",
+        "land": "Deutschland",
+        "latitude": 52.0727509,
+        "longitude": 8.6933088
+      },
+      {
+        "plz": "32108",
+        "stadt": "Bad Salzuflen",
+        "land": "Deutschland",
+        "latitude": 52.0853966,
+        "longitude": 8.8101326
+      },
+      {
+        "plz": "32105",
+        "stadt": "Bad Salzuflen",
+        "land": "Deutschland",
+        "latitude": 52.0848218,
+        "longitude": 8.7464532
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenanstellung/wochenvertrag-versendet",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenanstellung:wochenvertrag-versendet:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:studentenanstellung:wochenvertrag-versendet:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "correlates_with": "tech.studitemps:studentenanstellung:wochenvertrag-versendet:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "enacted_by": "tech.studitemps:studentenanstellung:deliver_weekly_contract",
+  "occurred_at": "2019-02-03T14:34:00+01:00",
+  "unreliable_debugging_data": {},
+  "dokumentiert_wochenvertrag_versand": {
+    "@id": "tech.studitemps:studentenanstellung:wochenvertrag:cw/201071/2019-16",
+    "version": 1,
+    "vertragsnummer": "cw/201071/2019-16/1",
+    "student": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+    "download_url": "https://ch-employment-staging.s3.amazonaws.com/66d302c0-dedc-4df4-80d6-688d00bb0d7a/cfa439a7-2dfe-4332-9907-190b3baf60ca_1.pdf",
+    "versendet_am": "2019-04-18T10:00:00+02:00",
+    "netto_arbeitszeit": 14.0,
+    "von": "2019-04-15",
+    "bis": "2019-04-21",
+    "schichten": [
+      {
+        "@id": "tech.studitemps:schichtplan:schicht:5504f687-0072-42ce-b086-5786010cdf73",
+        "von": "2019-04-18T10:00:00+02:00",
+        "bis": "2019-04-18T18:00:00+02:00",
+        "netto_arbeitszeit_in_stunden": 8.0,
+        "stundenlohn": [
+          {
+            "hoehe_in_cent": 1350,
+            "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50023",
+            "gueltig_ab": "2019-01-01"
+          }
+        ],
+        "auftrag": "tech.studitemps:auftragserstellung:auftrag:50023"
+      },
+      {
+        "@id": "tech.studitemps:schichtplan:schicht:86555dd8-c4a2-434a-8b08-79574c0a9d60",
+        "von": "2019-04-19T10:00:00+02:00",
+        "bis": "2019-04-19T16:00:00+02:00",
+        "netto_arbeitszeit_in_stunden": 6.0,
+        "stundenlohn": [
+          {
+            "hoehe_in_cent": 1233,
+            "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50042",
+            "gueltig_ab": "2019-04-01"
+          }
+        ],
+        "auftrag": "tech.studitemps:auftragserstellung:auftrag:50042"
+      }
+    ]
+  }
+}

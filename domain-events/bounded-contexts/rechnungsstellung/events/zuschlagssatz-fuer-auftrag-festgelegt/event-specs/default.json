@@ -1,0 +1,70 @@
+{
+    "@type": [
+      "https://studitemps.tech/specification/rechnungsstellung/zuschlagssatz-fuer-auftrag-festgelegt",
+      "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:rechnungsstellung:zuschlagssatz-fuer-auftrag-festgelegt:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "dokumentiert_zuschlagssatz": {
+      "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50000",
+      "gueltig_ab": "2018-12-01",
+      "enthaelt_zuschlaege": [
+        {
+          "name": "Samstagszuschlag",
+          "hat_vorraussetzungen": {
+            "gilt_von": "00:00:00",
+            "gilt_bis": "00:00:00",
+            "gilt_an_wochentag": 6,
+            "gilt_ab_dauer_in_minuten": 0,
+            "@type": "tech.studitemps:rechnungsstellung:zuschlag:wochentagsvoraussetzung"
+          },
+          "hat_konsequenz": {
+            "wert_in_prozent": 15.0
+          }
+        },
+         {
+          "name": "Sonntagszuschlag",
+          "hat_vorraussetzungen": {
+            "gilt_von": "00:00:00",
+            "gilt_bis": "00:00:00",
+            "gilt_an_wochentag": 7,
+            "gilt_ab_dauer_in_minuten": 0,
+            "@type": "tech.studitemps:rechnungsstellung:zuschlag:wochentagsvoraussetzung"
+          },
+          "hat_konsequenz": {
+            "wert_in_prozent": 50.0
+          }
+        },
+         {
+          "name": "Feiertagszuschlag",
+          "hat_vorraussetzungen": {
+            "gilt_ab_dauer_in_minuten": 0,
+            "@type": "tech.studitemps:rechnungsstellung:zuschlag:feiertagsvoraussetzung"
+          },
+          "hat_konsequenz": {
+            "wert_in_prozent": 100.0
+          }
+        },
+         {
+          "name": "Nachtzuschlag",
+          "hat_vorraussetzungen": {
+            "gilt_von": "23:00:00",
+            "gilt_bis": "06:00:00",
+            "gilt_ab_dauer_in_minuten": 120,
+            "@type": "tech.studitemps:rechnungsstellung:zuschlag:taegliche-voraussetzung"
+          },
+          "hat_konsequenz": {
+            "wert_in_prozent": 25.0
+          }
+        },
+         {
+          "name": "Mehrarbeitszuschlag",
+          "hat_voraussetzungen": {
+             "@type": "tech.studitemps:rechnungsstellung:zuschlag:mehrarbeitsvoraussetzung"
+          },
+          "hat_konsequenz": {
+            "wert_in_cent": 1500
+          }
+        }
+      ]
+    }
+  }

@@ -1,0 +1,16 @@
+{
+    "@type": [
+      "https://studitemps.tech/specification/sourcing/jobmensa-anzeige-beendet",
+      "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:sourcing:jobmensa-anzeige-beendet:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": "tech.studitemps:sourcing:jobmensa-anzeige-beendet:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "correlates_with": "tech.studitemps:sourcing:jobmensa-anzeige-veroeffentlicht:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "enacted_by": "tech.studitemps:sourcing:jobmensa-expires-joboffer",
+    "occurred_at": "2019-04-18T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "beendet_jobmensa_anzeige": {
+      "@id": "tech.studitemps:sourcing:jobmensa-anzeige:5cdd5a57-1914-4289-9db1-fb731dbcc715",
+      "ursache": "tech.studitemps:sourcing:jobmensa-anzeigen-ende:laufzeit-abgelaufen"
+    }
+  }

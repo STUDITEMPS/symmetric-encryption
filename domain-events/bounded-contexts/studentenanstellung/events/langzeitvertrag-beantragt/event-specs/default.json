@@ -1,0 +1,19 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenanstellung/langzeitvertrag-beantragt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenanstellung:langzeitvertrag-beantragt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:contracts:request-long-term-contract:bc779199-3a07-4b3b-837d-a4fde1ef16f5",
+  "correlates_with": "tech.studitemps:contracts:request-long-term-contract:bc779199-3a07-4b3b-837d-a4fde1ef16f5",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "beantragt_langzeitvertrag": {
+    "student": "tech.studitemps:studentenverwaltung:student:967049f6-1339-4aef-a91f-6b0d72bdf35e",
+    "von": "2019-04-01",
+    "bis": "2019-12-31",
+    "wochenstunden": 18.0,
+    "beantragt_von": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de"
+  }
+}

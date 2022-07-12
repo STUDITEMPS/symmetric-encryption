@@ -1,0 +1,19 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/vertragsverwaltung/self-service-auev-beidseitig-gezeichnet",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:kundenverwaltung:self-sevice-auev-beidseitig-gezeichnet:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "caused_by": "tech.studitemps:vertragsverwaltung:gegenzeichnung-bestaetigt",
+  "correlates_with": "tech.studitemps:personalbestellung:bestellung-aufgegeben:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "enacted_by": "tech.studitemps:vertragsverwaltung",
+  "occurred_at": "2020-11-10T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "zeichnet_self_service_auev_beidseitig": {
+    "@id": "tech.studitemps:vertragsverwaltung:self-service-auev:cbc0706d-590f-4db9-810c-872a75f37985",
+    "vertragsnummer": "1000-0001",
+    "kunde": "tech.studitemps:kundenverwaltung:kunde:967049f6-1339-4aef-a91f-6b0d72bdf35e",
+    "filiale": "tech.studitemps:kundenverwaltung:filiale:76549f6-1339-4aef-a91f-6b0d72dwas5e",
+    "fuer_bestellung": "tech.studitemps:personalbestellung:bestellung:1000"
+  }
+}

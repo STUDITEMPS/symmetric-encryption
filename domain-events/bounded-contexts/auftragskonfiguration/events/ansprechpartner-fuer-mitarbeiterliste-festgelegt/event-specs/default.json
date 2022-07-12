@@ -1,0 +1,15 @@
+{
+  "@id": "tech.studitemps:auftragskonfiguration:ansprechpartner-fuer-mitarbeiterliste-festgelegt:8dc58878-a6d9-4948-a46a-b07ce802b3ee",
+  "@type": [
+    "https://studitemps.tech/specification/auftragskonfiguration/ansprechpartner-fuer-mitarbeiterliste-festgelegt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "caused_by": "tech.studitemps:order-configuration:define-company-contact-for-employee-list:273c66c6-3589-41e2-abcb-5f7e51260bf5",
+  "correlates_with": "tech.studitemps:order-configuration:define-company-contact-for-employee-list:273c66c6-3589-41e2-abcb-5f7e51260bf5",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:maxi.musterfrau@studitemps.de",
+  "occurred_at": "2020-07-27T16:00:04+02:00",
+  "legt_ansprechpartner_fuer_mitarbeiterliste_fest": {
+    "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50000",
+    "email": "maxi.mueller@example.com"
+  }
+}

@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:STUDITEMPS/domain-events.git
+	branch = main
+	commit = b14d22c8110be63ff99892edddb42686c09d4a43
+	parent = 208afdcd1e3bfa98294bc87de24cf2ec321a54dd
+	method = merge
+	cmdver = 0.4.3

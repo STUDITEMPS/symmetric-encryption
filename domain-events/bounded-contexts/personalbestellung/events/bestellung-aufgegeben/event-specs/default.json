@@ -1,0 +1,43 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/personalbestellung/bestellung-aufgegeben",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:personalbestellung:bestellung-aufgegeben:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:personalbestellung:bestellung-aufgegeben:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "correlates_with": "tech.studitemps:personalbestellung:bestellung-aufgegeben:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "enacted_by": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:f68e8b6c-4562-47aa-8ca3-0ae4b775671e",
+  "occurred_at": "2021-02-12T14:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "gibt_bestellung_auf": {
+    "@id": "tech.studitemps:personalbestellung:bestellung:1000",
+    "kunde": "tech.studitemps:kundenverwaltung:kunde:967049f6-1339-4aef-a91f-6b0d72bdf35e",
+    "filiale": "tech.studitemps:kundenverwaltung:filiale:76549f6-1339-4aef-a91f-6b0d72dwas5e",
+    "von_kundenmitarbeiter": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:f68e8b6c-4562-47aa-8ca3-0ae4b775671e",
+    "aufgegeben_am": "2021-02-12T14:00:00+02:00",
+    "einsaetze": [
+      {
+        "@id": "tech.studitemps:personalbestellung:einsatz:34049f6-1229-4aef-a91f-6bt0d72bdw3",
+        "einsatzort": {
+          "strasse": "Hornstraße",
+          "hausnummer": "2",
+          "plz": "50823",
+          "stadt": "Köln",
+          "bundesland": "Nordrhein-Westfalen"
+        },
+        "taetigkeit": {
+          "individueller_name": "Warenverräumer",
+          "taetigkeitsprofil": "tech.studitemps:taetigkeiten:verkaufshilfe"
+        },
+        "einsatzzeit": {
+          "zeitraum": "2019-08-08T16:00:00+02:00/2019-08-08T23:00:00+02:00",
+          "netto_arbeitszeit": "PT6H30M",
+          "pause": "PT30M"
+        },
+        "anzahl_studenten": 3,
+        "verrechnungssatz_in_cent": 2200,
+        "stundenlohn_in_cent": 1100
+      }
+    ]
+  }
+}

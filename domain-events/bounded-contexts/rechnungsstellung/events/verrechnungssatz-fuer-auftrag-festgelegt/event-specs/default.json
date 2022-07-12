@@ -1,0 +1,12 @@
+{
+    "@type": [
+      "https://studitemps.tech/specification/rechnungsstellung/verrechnungssatz-fuer-auftrag-festgelegt",
+      "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:rechnungsstellung:verrechnungssatz-fuer-auftrag-festgelegt:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "dokumentiert_verrechnungssatz": {
+      "hoehe_in_cent": 2350,
+      "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50000",
+      "gueltig_ab": "2018-12-01"
+    }
+  }

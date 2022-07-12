@@ -1,0 +1,19 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/auftragskonfiguration/unternehmenskontakt-fuer-einsatzinformationen-festgelegt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:auftragskonfiguration:unternehmenskontakt-fuer-einsatzinformationen-festgelegt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:order-configuration:define-company-contact-for-employment-notification:ccdc991b-7eca-433a-9640-4edb1175f619",
+  "correlates_with": "tech.studitemps:order-configuration:define-company-contact-for-employment-notification:ccdc991b-7eca-433a-9640-4edb1175f619",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:temping.mitarbeiter@studitemps.de",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "legt_unternehmenskontakt_fuer_einsatzinformationen_fest": {
+    "fuer_auftrag": "tech.studitemps:auftragserstellung:auftrag:50000",
+    "anrede": "Frau",
+    "vorname": "Maxi",
+    "nachname": "Müller",
+    "email": "maxi.mueller@example.com"
+  }
+}

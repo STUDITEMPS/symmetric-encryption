@@ -1,0 +1,40 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/jobvalley-account-angelegt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:jobvalley-account-angelegt:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "caused_by": "tech.studitemps:studentenverwaltung:jobvalley-account-angelegt:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "correlates_with": "tech.studitemps:studentenverwaltung:jobvalley-account-angelegt:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "legt_jobvalley_account_an": {
+    "student": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+    "personalnummer": "12345678",
+    "stammdaten": {
+      "vorname": "Hans",
+      "nachname": "Mustermann",
+      "email_adresse": "hans@example.com",
+      "mobilnummer": "+49 123 456789",
+      "geschlecht": "männlich",
+      "staatsangehoerigkeit": "tech.studitemps:laender:iso3166-1:de",
+      "anschrift": {
+        "straße": "Studentenweg",
+        "hausnummer": "23",
+        "postleitzahl": "50670",
+        "stadt": "Köln",
+        "land": "Deutschland",
+        "zusatz": "c/o Hans Hauptmieter",
+        "latitude": "40.22422",
+        "longitude": "42.123345"
+      },
+      "ist_student": true
+    }
+  },
+  "pii": {
+    "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e": [
+      "$.legt_jobvalley_account_an.stammdaten"
+    ]
+  }
+}

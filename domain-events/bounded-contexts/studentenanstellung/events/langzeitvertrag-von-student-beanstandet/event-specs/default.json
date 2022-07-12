@@ -1,0 +1,16 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenanstellung/langzeitvertrag-von-student-beanstandet",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenanstellung:langzeitvertrag-von-student-beanstandet:37400816-d8ae-45fa-9166-d81daeb45d2b",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:ce1165da-5b8c-4412-90ad-934241ba7c33",
+  "occurred_at": "2018-05-13T00:00:00+02:00",
+  "beanstandet_langzeitvertrag": {
+    "@id": "tech.studitemps:studentenanstellung:langzeitvertrag:cw/200123/2018-20",
+    "version": 1,
+    "vertragsnummer": "cw/200123/2018-20/1",
+    "student": "tech.studitemps:studentenverwaltung:student:ce1165da-5b8c-4412-90ad-934241ba7c33",
+    "beanstandet_am": "2018-05-13T00:00:00+02:00"
+  }
+}

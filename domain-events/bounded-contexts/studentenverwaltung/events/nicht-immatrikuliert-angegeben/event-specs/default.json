@@ -1,0 +1,15 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/nicht-immatrikuliert-angegeben",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:nicht-immatrikuliert-angegeben:d42bed02-6039-4db1-9afb-1f87a30b70c9",
+  "caused_by": "tech.studitemps:studentenverwaltung:set-not-enrolled:0677f8e1-b537-4d35-a75c-a8c4d87e39c1",
+  "correlates_with": "tech.studitemps:studentenverwaltung:set-not-enrolled:0677f8e1-b537-4d35-a75c-a8c4d87e39c1",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e",
+  "occurred_at": "2019-04-18T10:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "gibt_nicht_immatrikuliert_an": {
+    "fuer_student": "tech.studitemps:studentenverwaltung:student:6ee2375f-77c5-4562-987a-ae2459a5f61e"
+  }
+}

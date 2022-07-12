@@ -1,0 +1,23 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/studentenstammdaten/name-angegeben",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:studentenstammdaten:name-angegeben:2eea81ea-586f-474b-82c0-7b21149e0106",
+    "caused_by": "tech.studitemps:studentenstammdaten:name-angegeben:2eea81ea-586f-474b-82c0-7b21149e0106",
+    "correlates_with": "tech.studitemps:studentenstammdaten:name-angegeben:2eea81ea-586f-474b-82c0-7b21149e0106",
+    "enacted_by": "tech.studitemps:studentenverwaltung:student:a40ff071-9bc0-4dd2-a56b-98bfd0d7d000",
+    "occurred_at": "2021-11-10T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "gibt_name_an": {
+        "student": "tech.studitemps:studentenverwaltung:student:a40ff071-9bc0-4dd2-a56b-98bfd0d7d000",
+        "vorname": "John",
+        "nachname": "Doe"
+    },
+    "pii": {
+        "tech.studitemps:studentenverwaltung:student:a40ff071-9bc0-4dd2-a56b-98bfd0d7d000": [
+            "$.gibt_name_an.vorname",
+            "$.gibt_name_an.nachname"
+        ]
+    }
+}

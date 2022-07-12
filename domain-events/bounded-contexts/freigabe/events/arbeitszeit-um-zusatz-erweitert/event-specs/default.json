@@ -1,0 +1,15 @@
+{
+  "@id": "tech.studitemps:freigabe:arbeitszeit-um-zusatz-erweitert:b7497542-3d90-4fff-ac57-eb7826858698",
+  "@type": [
+    "https://studitemps.tech/specification/timetracking/arbeitszeit-um-zusatz-erweitert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "caused_by":"tech.studitemps:freigabe:arbeitszeit-um-zusatz-erweitert:8f6090e4-9f37-4802-96c0-f82b7fa2fb97",
+  "correlates_with":"tech.studitemps:freigabe:arbeitszeit-um-zusatz-erweitern:8f6090e4-9f37-4802-96c0-f82b7fa2fb97",
+  "enacted_by":"tech.studitemps:identity:studitempsmitarbeiter:timie.tester@studitemps.de",
+  "occurred_at":"2019-03-06T20:18:31.735604+01:00",
+  "erweitert_arbeitszeit": {
+    "@id": "tech.studitemps:freigabe:arbeitszeit:6ce38f2f-e686-4d85-92da-22d5efb36c5e",
+    "mit_zusatz": "Kostenst. 123"
+  }
+}

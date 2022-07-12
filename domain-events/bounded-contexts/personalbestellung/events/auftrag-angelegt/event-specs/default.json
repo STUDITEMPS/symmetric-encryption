@@ -1,0 +1,77 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/personalbestellung/auftrag-angelegt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:personalbestellung:auftrag-angelegt:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:vertragsverwaltung:vertrag-gezeichnet:56b4e83c-40a5-493f-920a-e937cadf29e2",
+  "correlates_with": "tech.studitemps:personalbestellung:bestellung-aufgegeben:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "enacted_by": "tech.studitemps:personalbestellung",
+  "occurred_at": "2021-02-12T14:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "pii": {
+    "tech.studitemps:kundenverwaltung:kundenmitarbeiter:587151f6-1249-gd4e-ad2f-fs512d4s5dz2": [
+      "$.legt_auftrag_an.ansprechpartner.anrede",
+      "$.legt_auftrag_an.ansprechpartner.vorname",
+      "$.legt_auftrag_an.ansprechpartner.nachname",
+      "$.legt_auftrag_an.ansprechpartner.email"
+    ]
+  },
+  "legt_auftrag_an": {
+    "@id": "tech.studitemps:personalbestellung:auftrag:1000000",
+    "auftragsnummer": 1000000,
+    "kunde": {
+      "@id": "tech.studitemps:kundenverwaltung:kunde:967049f6-1339-4aef-a91f-6b0d72bdf35e",
+      "firmierung": "Example GmbH",
+      "vertragsadresse": {
+        "plz": "32107",
+        "stadt": "Bad Salzuflen",
+        "strasse": "Schlossallee",
+        "hausnummer": "24"
+      },
+      "handelsregisternummer": "HRA 23425",
+      "amtsgericht": "Köln"
+    },
+    "filiale": "tech.studitemps:kundenverwaltung:filiale:6cff4051-23ab-4ec1-8f65-ad38a4804fd3",
+    "ansprechpartner": {
+      "id": "tech.studitemps:kundenverwaltung:kundenmitarbeiter:62ff5ed6-eeb0-4681-b1f1-4b8e7b3bdd65",
+      "anrede": "Frau",
+      "vorname": "Anneliese",
+      "nachname": "Schmidt",
+      "email": "anneliese.schmidt@example.net"
+    },
+    "einsatzort": {
+      "plz": "32107",
+      "stadt": "Bad Salzuflen",
+      "strasse": "Bielefelder Straße",
+      "hausnummer": "38",
+      "land": "Deutschland",
+      "bundesland": "Nordrhein-Westfalen"
+    },
+    "sprachanforderungen": {
+      "sprachen": [
+        {
+          "sprache": "tech.studitemps:sprachen:iso639-1:de",
+          "niveau": "tech.studitemps:sprachen:niveau:fliessend"
+        }
+      ],
+      "alle_sprachen_gefordert": true
+    },
+    "taetigkeit": {
+      "taetigkeitsprofil": "tech.studitemps:taetigkeiten:verkaufshilfe",
+      "individueller_name": "Ordnungsliebende*r Kistenwagenschieber*in"
+    },
+    "entgeltgruppe": "EG1",
+    "stundenlohn_in_cent": 1000,
+    "verrechnungssatz_in_cent": 2000,
+    "rechnungsturnus": "tech.studitemps:rechnungsstellung:rechnungsturnus:woechentlich",
+    "zahlungsziel_in_tagen": 14,
+    "zuschlagssatz": "tech.studitemps:rechnungsstellung:zuschlagssatz:ohne-zuschlaege",
+    "zeiterfassungsart": "tech.studitemps:auftragskonfiguration:zeiterfassungsart:studentenzeiterfassung",
+    "einbuchen_in_schichten_freigeschaltet": true,
+    "automatisches_matching_aktiviert": true,
+    "taetigkeitsfelder": [
+      "tech.studitemps:taetigkeitsfeld:buerotaetigkeiten"
+    ]
+  }
+}

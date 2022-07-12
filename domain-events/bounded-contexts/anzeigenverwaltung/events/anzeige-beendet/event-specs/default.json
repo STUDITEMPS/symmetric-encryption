@@ -1,0 +1,15 @@
+{
+    "@type": [
+        "https://studitemps.tech/specification/anzeigenverwaltung/anzeige-beendet",
+        "https://studitemps.tech/specification/domain-event"
+    ],
+    "@id": "tech.studitemps:anzeigenverwaltung:anzeige-beendet:e7f4e458-3da6-427d-88e3-227bbad22062",
+    "caused_by": null,
+    "correlates_with": null,
+    "enacted_by": "tech.studitemps:temping:recrutier:<uuid>",
+    "occurred_at": "2019-07-15T10:00:00+02:00",
+    "unreliable_debugging_data": {},
+    "beendet-anzeige": {
+        "@id": "tech.studitemps:anzeigenverwaltung:anzeige:e866bcf6-2d9e-4414-a495-7d6204b9f217"
+    }
+}

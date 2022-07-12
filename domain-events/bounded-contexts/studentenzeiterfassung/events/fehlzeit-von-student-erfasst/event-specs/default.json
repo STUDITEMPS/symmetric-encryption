@@ -1,0 +1,17 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenzeiterfassung/fehlzeit-von-student-erfasst",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenzeiterfassung:fehlzeit-von-student-erfasst:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:studentenzeiterfassung:fehlzeit-von-student-erfasst:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "correlates_with": "tech.studitemps:studentenzeiterfassung:fehlzeit-von-student-erfasst:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+  "occurred_at": "2019-04-19T12:00:00+02:00",
+  "unreliable_debugging_data": {},
+  "dokumentiert_fehlzeit": {
+    "von_student": "tech.studitemps:studentenverwaltung:student:3df9132d-0732-4ed9-b380-0d8513f59804",
+    "fuer_schicht": "tech.studitemps:schichtplan:schicht:fffe43e8-3c21-11e9-a429-fbf0d0f1071c",
+    "in_auftrag": "tech.studitemps:auftragserstellung:auftrag:50070"
+  }
+}

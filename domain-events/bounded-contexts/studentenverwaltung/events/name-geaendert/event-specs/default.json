@@ -1,0 +1,22 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/name-geaendert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:name-geaendert:eb29bab1-1d3b-462b-8e77-e2f0babc413b",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:27b69448-e61d-49ef-b12f-1577b005580e",
+  "occurred_at": "2020-10-09T07:33:40+02:00",
+  "caused_by": "tech.studitemps:studentenverwaltung:change-name:69b27db7-599e-472e-b024-f87d3def2fa8",
+  "correlates_with": "tech.studitemps:studentenverwaltung:change-name:69b27db7-599e-472e-b024-f87d3def2fa8",
+  "pii": {
+    "tech.studitemps:studentenverwaltung:student:27b69448-e61d-49ef-b12f-1577b005580e": [
+      "$.aendert_name.vorname",
+      "$.aendert_name.nachname"
+    ]
+  },
+  "aendert_name": {
+    "fuer_student": "tech.studitemps:studentenverwaltung:student:27b69448-e61d-49ef-b12f-1577b005580e",
+    "vorname": "Lisa",
+    "nachname": "Krause"
+  }
+}

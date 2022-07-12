@@ -25,6 +25,10 @@ RUN $HOME/install-mix-tooling.sh \
 
 USER root
 
+COPY .devcontainer/install-git-subrepo.sh $HOME/
+RUN $HOME/install-git-subrepo.sh \
+    && rm $HOME/install-git-subrepo.sh
+
 RUN install-packages curl
 
 USER gitpod

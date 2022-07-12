@@ -1,0 +1,36 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenverwaltung/studienbescheinigung-korrigiert",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenverwaltung:studienbescheinigung-korrigiert:bd69d149-fcca-4115-b184-72b9adc3eca3",
+  "caused_by": "tech.studitemps:studentenverwaltung:studienbescheinigung-korrigiert:bd69d149-fcca-4115-b184-72b9adc3eca3",
+  "correlates_with": "tech.studitemps:studentenverwaltung:studienbescheinigung-korrigiert:bd69d149-fcca-4115-b184-72b9adc3eca3",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:b66181d4-8b4b-4824-914c-2c85b8fcbe87",
+  "occurred_at": "2021-08-04T14:00:00+02:00",
+  "korrigiert_studienbescheinigung": {
+    "student": "tech.studitemps:studentenverwaltung:student:b66181d4-8b4b-4824-914c-2c85b8fcbe87",
+    "studienbescheinigung": "tech.studitemps:studentenverwaltung:studienbescheinigung:56639342-955f-4ccb-994b-758ecdbfbe51",
+    "studentenangaben": {
+      "gueltig_ab": "2021-01-03",
+      "gueltig_bis": "2021-03-03",
+      "dateien": [
+        "https://some-updated.uri"
+      ],
+      "universitaet": {
+        "name": "Universität Bonn",
+        "staatlich_anerkannt": true
+      },
+      "studienfaecher": [
+        {
+          "fachsemester": 2,
+          "studienfach": "Biologie"
+        }
+      ],
+      "studienart": "tech.studitemps:beschaeftigungsart:teilzeit",
+      "besonderheiten": [
+        "tech.studitemps:studentenverwaltung:studienbesonderheit:urlaubssemester"
+      ]
+    }
+  }
+}

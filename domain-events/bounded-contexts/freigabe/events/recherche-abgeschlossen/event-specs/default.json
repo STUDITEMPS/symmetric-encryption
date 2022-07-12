@@ -1,0 +1,23 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/freigabe/recherche-abgeschlossen",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:freigabe:recherche-abgeschlossen:e7f4e458-3da6-427d-88e3-227bbad22062",
+  "caused_by": "tech.studitemps:freigabe:recherche-abschliessen:a92d636d-9dbe-4925-b855-05e49e1cc569",
+  "correlates_with": "tech.studitemps:freigabe:recherche-abschliessen:a92d636d-9dbe-4925-b855-05e49e1cc569",
+  "enacted_by": "tech.studitemps:identity:studitempsmitarbeiter:zukunfts.ede@solves.all",
+  "occurred_at": "2021-03-03T11:00:00+01:00",
+  "unreliable_debugging_data": {},
+  "schliesst_recherche_ab": {
+    "@id": "tech.studitemps:freigabe:recherchepaket:f4715430-70b8-0136-1580-54e1ad118e9f",
+    "fuer_zeitraum": "2021-02-22/2021-02-28",
+    "in_auftrag": "tech.studitemps:auftragserstellung:auftrag:67855",
+    "mit_arbeitszeiten": [
+      "tech.studitemps:studentenzeiterfassung:arbeitszeit:d0561ab6-06fb-480e-871e-c5ccd83aa4ba",
+      "tech.studitemps:studentenzeiterfassung:arbeitszeit:f4715430-70b8-0136-1580-54e1ad118e9f",
+      "tech.studitemps:studentenzeiterfassung:arbeitszeit:a43875e6-e60a-46be-a330-d0b7609d34b8"
+    ],
+    "version": 1
+  }
+}
