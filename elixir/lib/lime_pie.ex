@@ -1,6 +1,26 @@
 defmodule LimePie do
   defmodule KeyLime do
     defstruct [:name, :key]
+
+    def new(name) do
+      %__MODULE__{key: :crypto.strong_rand_bytes(32), name: name}
+    end
+
+    def parse(name_and_encoded_key) do
+      with [name, encoded_key] <- String.split(name_and_encoded_key, ~r/:/),
+           {:ok, decoded_key} = encoded_key |> Base.decode64() do
+        {:ok, %__MODULE__{name: name, key: decoded_key}}
+      else
+        [_name_only] ->
+          {:error, :key_string_must_have_name_and_encoded_cipher}
+
+        [_name, _encoded_key | _whatever] ->
+          {:error, :key_string_must_have_only_name_and_encoded_cipher}
+
+        :error ->
+          {:error, :decoding_of_key_cipher_via_base_64_failed}
+      end
+    end
   end
 
   @type named_key :: %KeyLime{}
@@ -24,7 +44,7 @@ defmodule LimePie do
     with {:ok, key_paths} <- key_paths_to_encrypt(event),
          {:ok, decrypted_values} <-
            map_values(key_paths, event, &decrypt_value(&1, named_keys)) do
-      event |> replace_values(decrypted_values)
+      {:ok, event |> replace_values(decrypted_values)}
     else
       {:error, :missing_value, _key_path} -> :FIXME
     end
@@ -32,6 +52,8 @@ defmodule LimePie do
 
   @spec map_values([binary], map, any :: {:ok, any} | {:error, atom}) ::
           {:ok, list({[binary], term})} | {:error, :mapping_values_failed, map}
+  def map_values([], _json_object, _map_function), do: {:ok, []}
+
   def map_values(key_paths, json_object, map_function) do
     result =
       key_paths
@@ -42,7 +64,6 @@ defmodule LimePie do
         end
       end)
       |> Enum.group_by(&elem(&1, 0), fn {_atom, key_path, value} -> {key_path, value} end)
-      |> IO.inspect(label: :mapped_and_grouped_values)
 
     if result |> Map.has_key?(:error) do
       {:error, :mapping_values_failed, result[:error]}
@@ -87,8 +108,7 @@ defmodule LimePie do
              iv |> Base.decode64!(),
              tag |> Base.decode64!(),
              key_name
-           )
-           |> IO.inspect(label: :decrypted_string),
+           ),
          {:ok, decoded_value} <-
            Jason.decode(decrypted_string) do
       {:ok, decoded_value}
@@ -102,13 +122,20 @@ defmodule LimePie do
   end
 
   @spec key_paths_to_encrypt(domain_event) :: [key_paths]
-  def key_paths_to_encrypt(domain_event) do
+  def key_paths_to_encrypt(%{pii: data_owners_with_keys})
+      when is_map(data_owners_with_keys) do
     {:ok,
-     domain_event["pii"]
-     |> Enum.flat_map(fn {_referenced_entity, protected_key_paths} -> protected_key_paths end)
+     data_owners_with_keys
+     |> Enum.flat_map(fn {_referenced_entity, protected_key_paths} ->
+       protected_key_paths
+     end)
      |> Enum.uniq()
-     |> Enum.map(&(String.split(&1, ~r/\./) |> Enum.drop(1)))}
+     |> Enum.map(fn key_path ->
+       key_path |> String.split(~r/\./) |> Enum.drop(1) |> Enum.map(&String.to_atom/1)
+     end)}
   end
+
+  def key_paths_to_encrypt(_domain_event), do: {:ok, []}
 
   def fake_event do
     """
@@ -141,9 +168,5 @@ defmodule LimePie do
 
     """
     |> Jason.decode!()
-  end
-
-  def fake_named_key(name \\ "some_random_name") do
-    %LimePie.KeyLime{key: :crypto.strong_rand_bytes(32), name: name}
   end
 end
