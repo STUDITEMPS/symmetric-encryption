@@ -49,6 +49,7 @@ defmodule Mix.Tasks.LimePie do
     end
   end
 
+  @spec get_output(keyword()) :: {:ok, File.io_device()} | {:error, File.posix()} | {:ok, :stdio}
   def get_output(parsed) do
     case Keyword.get(parsed, :output, nil) do
       nil -> {:ok, :stdio}
@@ -56,6 +57,7 @@ defmodule Mix.Tasks.LimePie do
     end
   end
 
+  @spec get_file_name([binary]) :: {:error, binary} | {:ok, binary}
   def get_file_name([]), do: {:error, "You must specify an input file"}
 
   def get_file_name([filename]) do
@@ -70,7 +72,8 @@ defmodule Mix.Tasks.LimePie do
     {:error, "You can specify only one input file"}
   end
 
-  def convert_event(event, :encode, key_lime) do
+  @spec convert_event(map, :encode | :decode, LimePie.KeyLime.t()) :: {:ok, map} | {:error, atom}
+  def(convert_event(event, :encode, key_lime)) do
     LimePie.encrypt_domain_event(event, key_lime)
   end
 

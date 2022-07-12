@@ -8,9 +8,10 @@ defmodule LimePie do
   @type named_keys :: %{binary => named_key}
   @type key_path :: [atom]
   @type key_paths :: [key_path]
+  @type converted_values :: list({[binary], term})
 
-  # @spec encrypt_domain_event(domain_event, named_key) :: {:ok, domain_event} | {:error, atom}
-  def encrypt_domain_event(event, named_key) do
+  @spec encrypt_domain_event(domain_event, named_key) :: {:ok, domain_event} | {:error, atom}
+  def(encrypt_domain_event(event, named_key)) do
     with {:ok, key_paths} <- key_paths_to_encrypt(event),
          {:ok, encrypted_values} <-
            map_values(key_paths, event, &encrypt_value(&1, named_key)) do
@@ -20,7 +21,7 @@ defmodule LimePie do
     end
   end
 
-  # @spec encrypt_domain_event(domain_event, named_keys) :: {:ok, domain_event} | {:error, atom}
+  @spec encrypt_domain_event(domain_event, named_keys) :: {:ok, domain_event} | {:error, atom}
   def decrypt_domain_event(event, named_keys) do
     with {:ok, key_paths} <- key_paths_to_encrypt(event),
          {:ok, decrypted_values} <-
@@ -31,7 +32,12 @@ defmodule LimePie do
     end
   end
 
-  # @spec map_values([atom], map, any :: {:ok, any()} | {:error, atom, any}) :: {:ok, list({[binary], term})} | {:error, :mapping_values_failed, map}
+  @spec map_values(
+          key_paths :: [[atom()]],
+          event :: map,
+          convert :: (any -> {:ok, any()} | {:error, atom, any})
+        ) ::
+          {:ok, converted_values} | {:error, :mapping_values_failed, map}
   def map_values([], _json_object, _map_function), do: {:ok, []}
 
   def map_values(key_paths, json_object, map_function) do
@@ -52,7 +58,7 @@ defmodule LimePie do
     end
   end
 
-  # @spec replace_values(map, list({[binary], term})) :: map
+  @spec replace_values(map, list({[binary], term})) :: map
   def replace_values(domain_event, key_paths_with_values) do
     key_paths_with_values
     |> Enum.reduce(domain_event, fn {key_path, value}, domain_event ->
@@ -60,7 +66,7 @@ defmodule LimePie do
     end)
   end
 
-  # @spec encrypt_value(binary, named_key) :: {:ok, map} | {:error, atom, keyword()}
+  @spec encrypt_value(binary, named_key) :: {:ok, map} | {:error, atom, keyword()}
   def encrypt_value(json_value, named_key) do
     aad = named_key.name
 
@@ -78,7 +84,7 @@ defmodule LimePie do
      }}
   end
 
-  # @spec decrypt_value(map, named_key) :: {:ok, binary | map} | {:error, atom, keyword()}
+  @spec decrypt_value(any, named_key) :: {:ok, binary | map} | {:error, atom, keyword()}
   def decrypt_value(%{aad: key_name, iv: iv, tag: tag, ciphertext: ciphertext}, named_keys) do
     with {:ok, named_key} <- named_keys |> Map.fetch(key_name),
          {:ok, decrypted_string} <-
@@ -104,7 +110,9 @@ defmodule LimePie do
     end
   end
 
-  # @spec key_paths_to_encrypt(domain_event) :: {:ok, key_paths}
+  def decrypt_value(value, named_keys), do: {:error, :value_is_not_encrypted, value}
+
+  @spec key_paths_to_encrypt(domain_event) :: {:ok, key_paths}
   def key_paths_to_encrypt(%{pii: data_owners_with_keys})
       when is_map(data_owners_with_keys) do
     {:ok,
