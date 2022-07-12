@@ -98,7 +98,7 @@ defmodule LimePie.SymmetricEncryption do
     error ->
       case error do
         %ErlangError{original: {:badarg, _c_file_info, message}} -> {:error, message}
-        _ -> error |> IO.inspect()
+        _ -> error |> inspect() |> IO.puts()
       end
   end
 

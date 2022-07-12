@@ -31,7 +31,7 @@ defmodule Mix.Tasks.LimePie do
     end
   end
 
-  @spec get_key_lime(keyword()) :: {:ok, %LimePie.KeyLime{}} | {:error, atom}
+  @spec get_key_lime(keyword()) :: {:ok, LimePie.KeyLime.t()} | {:error, atom}
   def get_key_lime(parsed) do
     if parsed[:key] do
       LimePie.KeyLime.parse(parsed[:key])
@@ -40,6 +40,7 @@ defmodule Mix.Tasks.LimePie do
     end
   end
 
+  @spec get_operation(keyword()) :: {:ok, :encode | :decode} | {:error, binary}
   def get_operation(parsed) do
     cond do
       Keyword.get(parsed, :decode) -> {:ok, :decode}
