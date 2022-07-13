@@ -27,8 +27,6 @@ defmodule LimePie do
          {:ok, decrypted_values} <-
            map_values(key_paths, event, &decrypt_value(&1, named_keys)) do
       {:ok, event |> replace_values(decrypted_values)}
-    else
-      {:error, :mapping_values_failed, _key_path} -> :FIXME
     end
   end
 
@@ -46,7 +44,7 @@ defmodule LimePie do
       |> Enum.map(fn key_path ->
         case json_object |> get_in(key_path) |> map_function.() do
           {:ok, value} -> {:ok, key_path, value}
-          {:error, value} -> {:error, key_path, value}
+          {:error, what, context} -> {:error, what, context |> Keyword.put(:key_path, key_path)}
         end
       end)
       |> Enum.group_by(&elem(&1, 0), fn {_atom, key_path, value} -> {key_path, value} end)
@@ -100,7 +98,7 @@ defmodule LimePie do
       {:ok, decoded_value}
     else
       :error ->
-        {:error, :unknown_key, name: key_name}
+        {:error, :unknown_key, missing_key_name: key_name}
 
       {:error, atom} when is_atom(atom) ->
         {:error, atom, []}
@@ -110,7 +108,7 @@ defmodule LimePie do
     end
   end
 
-  def decrypt_value(value, named_keys), do: {:error, :value_is_not_encrypted, value}
+  def decrypt_value(value, _named_keys), do: {:error, :value_is_not_encrypted, value}
 
   @spec key_paths_to_encrypt(domain_event) :: {:ok, key_paths}
   def key_paths_to_encrypt(%{pii: data_owners_with_keys})
@@ -122,7 +120,13 @@ defmodule LimePie do
      end)
      |> Enum.uniq()
      |> Enum.map(fn key_path ->
-       key_path |> String.split(~r/\./) |> Enum.drop(1) |> Enum.map(&String.to_atom/1)
+       key_path
+       # split by dots
+       |> String.split(~r/\./)
+       # drop the "$." at the beginning
+       |> Enum.drop(1)
+       # use atoms, not string
+       |> Enum.map(&String.to_atom/1)
      end)}
   end
 
