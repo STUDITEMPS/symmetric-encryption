@@ -22,9 +22,16 @@ ENCODER=$BIN_DIR/encode_$2
 DECODER=$BIN_DIR/decode_$4
 
 TMP_DIR=$(mktemp -d)
+
+# copy the source file while sorting its keys, so the diff later is feasible
 jq --sort-keys '.' $ORIGINAL_EVENT_FILE > $TMP_DIR/source.json
+# encrypt the source event with ENCODER_LANGUAGE
 $ENCODER $TMP_DIR/source.json "$NAMED_KEY" > $TMP_DIR/encrypted.json
+# decrypt the encrypted event with DECODER_LANGUAGE, and sort its keys
 $DECODER $TMP_DIR/encrypted.json "$NAMED_KEY" | jq --sort-keys . > $TMP_DIR/decrypted.json
+# check that the source event and the decrypted event dont differ
 diff $TMP_DIR/source.json $TMP_DIR/decrypted.json
 
+
+# if the files didnt differ, we can remove the temp dir and its contents
 rm -rf $TMP_DIR
