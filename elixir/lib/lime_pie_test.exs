@@ -2,10 +2,10 @@ defmodule LimePieTest do
   use ExUnit.Case
   doctest LimePie
 
-  describe("key_paths_to_encrypt/1") do
+  describe("paths_to_personally_identifiable_information/1") do
     test "returns the list of referenced paths, dropping the referencing entity" do
       assert {:ok, [[:a, :b], [:e, :f], [:c, :d]]} =
-               LimePie.key_paths_to_encrypt(%{
+               LimePie.paths_to_personally_identifiable_information(%{
                  pii: %{
                    "entity_1" => ["$.a.b", "$.e.f"],
                    "entity_2" => ["$.c.d", "$.e.f"]
@@ -14,7 +14,7 @@ defmodule LimePieTest do
     end
 
     test "returns no keys if field :pii is missing" do
-      assert {:ok, []} = LimePie.key_paths_to_encrypt(%{})
+      assert {:ok, []} = LimePie.paths_to_personally_identifiable_information(%{})
     end
   end
 
@@ -119,7 +119,7 @@ defmodule LimePieTest do
       object_before = %{a: %{b: "unchanged value 1", c: "unchanged_value 2", d: "its a keeper"}}
 
       assert {:error, :mapping_values_failed,
-              [not_value_1: [{:key_path, [:a, :c]}, {:some, :context}]]} =
+              [not_value_1: [{:path_to_pii, [:a, :c]}, {:some, :context}]]} =
                LimePie.map_values(key_paths, object_before, fn
                  "unchanged value 1" = value -> {:ok, "##" <> value}
                  _other_value -> {:error, :not_value_1, some: :context}
@@ -177,9 +177,9 @@ defmodule LimePieTest do
     test "fails if no matching key is found" do
       assert {:error, :mapping_values_failed,
               [
-                unknown_key: [key_path: [:a, :b], missing_key_name: "valid_key"],
-                unknown_key: [key_path: [:e, :f], missing_key_name: "valid_key"],
-                unknown_key: [key_path: [:a, :c], missing_key_name: "valid_key"]
+                unknown_key: [path_to_pii: [:a, :b], missing_key_name: "valid_key"],
+                unknown_key: [path_to_pii: [:e, :f], missing_key_name: "valid_key"],
+                unknown_key: [path_to_pii: [:a, :c], missing_key_name: "valid_key"]
               ]} ==
                LimePie.decrypt_domain_event(@encrypted_event, %{"other_key" => @valid_key})
     end
@@ -187,9 +187,9 @@ defmodule LimePieTest do
     test "fails if named key does not work" do
       assert {:error, :mapping_values_failed,
               [
-                decrypt_failed: [key_path: [:a, :b]],
-                decrypt_failed: [key_path: [:e, :f]],
-                decrypt_failed: [key_path: [:a, :c]]
+                decrypt_failed: [path_to_pii: [:a, :b]],
+                decrypt_failed: [path_to_pii: [:e, :f]],
+                decrypt_failed: [path_to_pii: [:a, :c]]
               ]} ==
                LimePie.decrypt_domain_event(@encrypted_event, %{"valid_key" => @other_key})
     end
