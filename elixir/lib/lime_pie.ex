@@ -22,11 +22,20 @@ defmodule LimePie do
   end
 
   @spec encrypt_domain_event(domain_event, named_keys) :: {:ok, domain_event} | {:error, atom}
-  def decrypt_domain_event(event, named_keys) do
+  def decrypt_domain_event(event, named_keys, fail_quietly \\ false)
+
+  def decrypt_domain_event(event, named_keys, false) do
     with {:ok, key_paths} <- key_paths_to_encrypt(event),
          {:ok, decrypted_values} <-
            map_values(key_paths, event, &decrypt_value(&1, named_keys)) do
       {:ok, event |> replace_values(decrypted_values)}
+    end
+  end
+
+  def decrypt_domain_event(event, named_keys, true) do
+    case decrypt_domain_event(event, named_keys, false) do
+      {:ok, event_with_decrypted_values} -> {:ok, event_with_decrypted_values}
+      {:error, _some_error} -> {:ok, event}
     end
   end
 

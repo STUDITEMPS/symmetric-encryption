@@ -1,31 +1,41 @@
-# SymmetricEncryption
+# LimePie
+## adding the library to your app
 
-Provides tooling to symmetrically encrypt/decrypt data across different programming languages.
+Add the package by adding the following to your `deps()` in `mix.exs`:
 
-## Supported Languages
-
-- Ruby
-- Elixir
-
-## Installation
-
-### Ruby
-
-### Elixir
-
-The package can be installed by adding `symmetric_encryption` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:symmetric_encryption, "~> 0.1", git: "https://github.com/STUDITEMPS/symmetric-encryption.git", branch: "main", sparse: ["elixir"]}
-  ]
-end
+```
+  {
+    :lime_pie,
+    "~> 0.1",
+    git: "https://github.com/STUDITEMPS/symmetric-encryption.git",
+    sparse: "elixir",
+    branch: "main"
+  }
 ```
 
-## Usage
+Add the following to your `config/runtime.exs` to provide the configured keys from your system environment:
 
-### General
+```
+config :your_app_name_here,
+       LimePie,
+       keys: System.get_env("LIME_PIE_KEYS", ""),
+       encryption_key_name: System.get_env("LIME_PIE_ENCRYPTION_KEY_NAME")
 
-The underlying encryption algorithm is AES-256-GCM, that is the _Advanced Encryption Standard_ block cipher with _256_ bit keys in the _Galois Counter Mode_.
-The biggest error anyone can do when using AES-256-GCM is to reuse an initialization vector (IV) key pair. **NEVER USE THE SAME IV TWICE!** If you reuse an IV, you might as well post your secret key on Twitter.
+```
+
+And start the key cache at startup in your `application.ex`:
+
+```
+  def start(_type, _args) do
+    children =
+      [
+        ...
+        {LimePie.Config, Application.get_env(:your_app_name_here, LimePie)}
+      ] ++ environment_specific_children(Mix.env())
+
+    Supervisor.start_link(children, your_opts)
+  end
+
+```
+
+

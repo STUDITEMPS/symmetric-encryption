@@ -50,6 +50,9 @@ defmodule LimePie.KeyLime do
   """
 
   @spec parse_multiple_keys(binary) :: %{optional(binary) => t() | {:error, atom}}
+
+  def parse_multiple_keys(""), do: {:error, :empty_string_to_parse}
+
   def parse_multiple_keys(binary) do
     binary
     |> String.split(~r/;/)
