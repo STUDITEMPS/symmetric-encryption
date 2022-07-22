@@ -42,10 +42,10 @@ module SymmetricEncryption
   end
 
   def self.encode(value)
-    ::Base64.encode64(value).encode("utf-8")
+    ::Base64.encode64(value)
   end
 
   def self.decode(value)
-    Base64.decode64(value.encode("ascii-8bit"))
+    Base64.decode64(value)
   end
 end
