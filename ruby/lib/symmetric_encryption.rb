@@ -7,12 +7,13 @@ require "base64"
 # Provides symmetric encryption via AES-256-GCM
 module SymmetricEncryption
   class DecryptionError < StandardError; end
-  EncryptionResult = ::Struct.new(:encrypted_data, :initialization_vector, :tag)
+  EncryptionResult = ::Struct.new(:aad, :ciphertext, :iv, :tag)
 
   ALGORITHM = "aes-256-gcm"
   TAG_LENGTH = 16
 
-  def self.encrypt(data, key)
+  def self.encrypt(data, named_key)
+    key_name, key = named_key.split(":")
     cipher = ::OpenSSL::Cipher.new(ALGORITHM).encrypt
     cipher.key = key
     iv = cipher.random_iv
@@ -21,19 +22,28 @@ module SymmetricEncryption
 
     encrypted_data = cipher.update(data) + cipher.final
 
-    EncryptionResult.new(encode(encrypted_data), encode(iv), encode(cipher.auth_tag(TAG_LENGTH)))
+    build_result(encrypted_data, cipher, iv, key_name)
   end
 
-  def self.decrypt(encrypted_data, key, initialization_vector, tag, authenticated_additional_data)
+  def self.decrypt(aad, encrypted_data, named_keys, initialization_vector, tag)
     tag = decode(tag)
     raise DecryptionError, "invalid tag length" if tag.bytesize != TAG_LENGTH
 
+    named_keys.each do |named_key|
+      key_name, key = named_key.split(":")
+      next if aad != key_name
+
+      return decipher(key, initialization_vector, tag, encrypted_data)
+    end
+  end
+
+  def self.decipher(key, ini_vector, tag, encrypted_data)
     decipher = ::OpenSSL::Cipher.new(ALGORITHM).decrypt
     decipher.key = key
-    initialization_vector = decode(initialization_vector)
+    initialization_vector = decode(ini_vector)
     decipher.iv = initialization_vector
     decipher.auth_tag = tag
-    decipher.auth_data = authenticated_additional_data
+    decipher.auth_data = ""
 
     encrypted_data = decode(encrypted_data)
     decipher.update(encrypted_data) + decipher.final
@@ -41,11 +51,20 @@ module SymmetricEncryption
     raise DecryptionError
   end
 
+  def self.build_result(encrypted_data, cipher, ini_vector, key_name)
+    EncryptionResult.new(
+      key_name,
+      encode(encrypted_data),
+      encode(ini_vector),
+      encode(cipher.auth_tag(TAG_LENGTH))
+    )
+  end
+
   def self.encode(value)
     ::Base64.encode64(value)
   end
 
   def self.decode(value)
-    Base64.decode64(value)
+    ::Base64.decode64(value)
   end
 end
