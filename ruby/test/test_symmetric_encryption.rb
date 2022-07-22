@@ -15,6 +15,8 @@ class TestSymmetricEncryption < Minitest::Test
     refute_nil result.initialization_vector
     refute_nil result.encrypted_data
     refute_nil result.tag
-    assert result.tag.bytesize == 16
+
+    raw_tag = SymmetricEncryption.decode(result.tag)
+    assert raw_tag.bytesize == 16
   end
 end

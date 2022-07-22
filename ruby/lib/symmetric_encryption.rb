@@ -2,6 +2,7 @@
 
 require_relative "symmetric_encryption/version"
 require "openssl"
+require "base64"
 
 # Provides symmetric encryption via AES-256-GCM
 module SymmetricEncryption
@@ -20,20 +21,31 @@ module SymmetricEncryption
 
     encrypted_data = cipher.update(data) + cipher.final
 
-    EncryptionResult.new(encrypted_data, iv, cipher.auth_tag(TAG_LENGTH))
+    EncryptionResult.new(encode(encrypted_data), encode(iv), encode(cipher.auth_tag(TAG_LENGTH)))
   end
 
   def self.decrypt(encrypted_data, key, initialization_vector, tag, authenticated_additional_data)
+    tag = decode(tag)
     raise DecryptionError, "invalid tag length" if tag.bytesize != TAG_LENGTH
 
     decipher = ::OpenSSL::Cipher.new(ALGORITHM).decrypt
     decipher.key = key
+    initialization_vector = decode(initialization_vector)
     decipher.iv = initialization_vector
     decipher.auth_tag = tag
     decipher.auth_data = authenticated_additional_data
 
+    encrypted_data = decode(encrypted_data)
     decipher.update(encrypted_data) + decipher.final
   rescue ::OpenSSL::CipherError
     raise DecryptionError
+  end
+
+  def self.encode(value)
+    ::Base64.encode64(value).encode("utf-8")
+  end
+
+  def self.decode(value)
+    Base64.decode64(value.encode("ascii-8bit"))
   end
 end
