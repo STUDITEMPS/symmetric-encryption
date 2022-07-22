@@ -7,7 +7,11 @@ require "base64"
 # Provides symmetric encryption via AES-256-GCM
 module SymmetricEncryption
   class DecryptionError < StandardError; end
-  EncryptionResult = ::Struct.new(:aad, :ciphertext, :iv, :tag)
+  EncryptionResult = ::Struct.new(:aad, :ciphertext, :iv, :tag) do
+    def to_json(**args)
+      to_h.to_json(args)
+    end
+  end
 
   ALGORITHM = "aes-256-gcm"
   TAG_LENGTH = 16

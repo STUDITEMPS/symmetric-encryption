@@ -33,7 +33,7 @@ class LimePie
 
   def self.set_nested_value(domain_event, keys, value)
     if keys.count == 1
-      value = JSON(value.to_h) if value.is_a?(SymmetricEncryption::EncryptionResult)
+      value = value.to_json if value.is_a?(SymmetricEncryption::EncryptionResult)
       return domain_event[keys[0]] = value
     end
 
