@@ -73,6 +73,8 @@ module SymmetricEncryption
   end
 
   def self.decrypt(aad, encrypted_data, named_keys, initialization_vector, tag)
+    return nil if encrypted_data.nil?
+
     tag = decode(tag)
     raise DecryptionError, "invalid tag length" if tag.bytesize != TAG_LENGTH
 
