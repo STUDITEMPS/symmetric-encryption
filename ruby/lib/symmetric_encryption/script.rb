@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'pry'
 require "json"
 require_relative "../symmetric_encryption"
 
@@ -10,7 +11,14 @@ def get_key(args)
     puts "USAGE: Provide an encryption key (--key <KEY>)"
     exit
   end
-  args[key_index + 1]
+  key = args[key_index + 1]
+
+  if key == ""
+    puts "No encryption key provided (Usage: --key <NAMED:KEY>)"
+    exit
+  end
+
+  key
 end
 
 def encode(args, key)
