@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd $(dirname $0)/../ruby
+
+SOURCE_FILE="$1"
+NAMED_KEY="$2"
+ruby ./lib/symmetric_encryption/script.rb --key "$NAMED_KEY" --encode $SOURCE_FILE 
