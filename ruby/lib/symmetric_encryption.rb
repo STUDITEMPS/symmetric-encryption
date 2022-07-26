@@ -24,7 +24,7 @@ module SymmetricEncryption
     def self.handle_domain_event(domain_event, named_key)
       return if named_key.empty? || domain_event.nil?
 
-      pii = domain_event["pii"].values.flatten
+      pii = domain_event["pii"]&.values&.flatten || []
 
       pii.each do |path|
         keys = path.split(".")[1..]
@@ -35,10 +35,11 @@ module SymmetricEncryption
       domain_event
     end
 
-    def self.set_nested_value(domain_event, keys, value)
-      if keys.count == 1
+    def self.set_nested_value(domain_event, keys, value, force: false)
+      if keys.one?
         value = value.to_json if value.is_a?(SymmetricEncryption::EncryptionResult)
-        return domain_event[keys[0]] = value
+        domain_event[keys[0]] = value if domain_event.key?(keys[0]) || force
+        return
       end
 
       found = domain_event[keys[0]]
@@ -57,6 +58,8 @@ module SymmetricEncryption
   TAG_LENGTH = 16
 
   def self.encrypt(data, named_key)
+    return nil unless data
+
     key_name, key = named_key.split(":")
     cipher = ::OpenSSL::Cipher.new(ALGORITHM).encrypt
     cipher.key = key
@@ -64,7 +67,7 @@ module SymmetricEncryption
     cipher.iv = iv
     cipher.auth_data = ""
 
-    encrypted_data = cipher.update(data) + cipher.final
+    encrypted_data = cipher.update(data.to_s) + cipher.final
 
     build_result(encrypted_data, cipher, iv, key_name)
   end
