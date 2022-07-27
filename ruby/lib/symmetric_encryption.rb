@@ -57,7 +57,7 @@ module SymmetricEncryption
   TAG_LENGTH = 16
 
   def self.encrypt(data, named_key)
-    return nil if data.nil? || data == {}
+    return nil if data.nil? || data == "" || data == {}
 
     key_name, key = named_key.split(":")
     cipher = ::OpenSSL::Cipher.new(ALGORITHM).encrypt
