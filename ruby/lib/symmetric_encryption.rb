@@ -16,7 +16,6 @@ module SymmetricEncryption
 
     def self.decrypt_domain_event(domain_event, named_keys = [])
       handle_domain_event(domain_event, named_keys) do |value|
-        value = JSON(value)
         SymmetricEncryption.decrypt(value["aad"], value["ciphertext"], named_keys, value["iv"], value["tag"])
       end
     end
@@ -28,7 +27,7 @@ module SymmetricEncryption
 
       pii.each do |path|
         keys = path.split(".")[1..]
-        value = domain_event.dig(*keys)
+        value = domain_event.dig(*keys) || {}
         altered_value = yield(value)
         set_nested_value(domain_event, keys, altered_value)
       end
@@ -37,7 +36,7 @@ module SymmetricEncryption
 
     def self.set_nested_value(domain_event, keys, value, force: false)
       if keys.one?
-        value = value.to_json if value.is_a?(SymmetricEncryption::EncryptionResult)
+        value = JSON(value.to_json) if value.is_a?(SymmetricEncryption::EncryptionResult)
         domain_event[keys[0]] = value if domain_event.key?(keys[0]) || force
         return
       end
@@ -58,7 +57,7 @@ module SymmetricEncryption
   TAG_LENGTH = 16
 
   def self.encrypt(data, named_key)
-    return nil if data.nil? || data == ""
+    return nil if data.nil? || data == {}
 
     key_name, key = named_key.split(":")
     cipher = ::OpenSSL::Cipher.new(ALGORITHM).encrypt
