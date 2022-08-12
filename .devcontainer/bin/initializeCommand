@@ -1,0 +1,5 @@
+#!/bin/bash -ieu
+
+# This is a hack due to some tooling mismatch that produces a container called `freigabe-devcontainer` but looks for a container called 'freigabe_devcontainer'.
+# This should be removed ASAP.
+docker tag freigabe-devcontainer freigabe_devcontainer 2>/dev/null || true
