@@ -26,7 +26,7 @@ class SystemLandscape
     jobmensa: 'Jobmensa',
     matchees: 'Matcheese',
     clubhouse: 'StudentServices',
-    'sv-einordnung': 'Jehovakel'
+    'sv-einordnung': 'Snake'
   }.transform_keys(&:to_s).freeze
 
   attr_reader :rabbitmq_url, :output

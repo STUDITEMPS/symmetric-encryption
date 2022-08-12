@@ -1,0 +1,25 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenstammdaten/sozialversicherungsnummer-angegeben",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenstammdaten:sozialversicherungsnummer-angegeben:6552588b-a096-4e1b-94d5-e715301e2c47",
+  "caused_by": "tech.studitemps:studentenstammdaten:sozialversicherungsnummer-angegeben:6552588b-a096-4e1b-94d5-e715301e2c47",
+  "correlates_with": "tech.studitemps:studentenstammdaten:sozialversicherungsnummer-angegeben:6552588b-a096-4e1b-94d5-e715301e2c47",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce",
+  "occurred_at": "2018-07-30T14:00:00+02:00",
+  "pii": {
+    "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce": [
+      "$.gibt_sozialversicherungsnummer_an.sozialversicherungsnummer"
+    ]
+  },
+  "gibt_sozialversicherungsnummer_an": {
+    "student": "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce",
+    "sozialversicherungsnummer": {
+      "aad": "named_key",
+      "ciphertext": "6tDfFLusJg+zRQdv\n",
+      "iv": "GNcZiuStWIsrcOSq\n",
+      "tag": "BPQCdtCBxeCkkz9+oLAeSg==\n"
+    }
+  }
+}

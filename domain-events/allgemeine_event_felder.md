@@ -47,3 +47,11 @@ Um bei Einsatz von Time-based UUIDs eine Ausforschung der Systemlandschaft zu er
 ### @type Attribut
 
 Die Idee hinter dem @type Attribut ist, dass dort URLs aufgeführt werden, die das jeweiligen Event menschen- und maschinenlesbar beschreiben. Diese könnten z. B. für Integration-Tests und Linked Data verwendet werden. Die meisten Events verweisen auf eine studitemps.tech Domain, die derzeit noch nicht auflösbar ist (da gibt es noch technische Probleme). Schlussendlich soll die studitemps.tech URL aber auf die Confluence Dokumente weiterleiten.
+
+### Verschlüsselte Felder
+
+Personenbezogene (PII) oder andere sensible Daten können mit LimePie/SymmetricEncryption verschlüsselt werden. Verschlüsselte Daten werden folgendermaßen repräsentiert:
+
+`{ "aad": String, "ciphertext": String, "iv": String, "tag": String }`
+
+Weiter Informationen dazu hier: https://github.com/STUDITEMPS/lime-pie

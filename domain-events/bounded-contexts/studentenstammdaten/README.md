@@ -8,12 +8,17 @@ Aktuell werden hier folgende Events publiziert:
 
 - Anrede angegeben
 - Anschrift angegeben
+- Bankdaten angegeben
 - Email Adresse angegeben
 - Geburtsdatum angegeben
 - Geschlecht angegeben
-- Studentenstatus angegeben
+- Krankenversicherung angegeben
 - Mobilnummer angegeben
 - Name angegeben
-- Staatsangehoerigkeit angegeben
 - Profilbild hinterlegt
+- Sozialversicherungsnummer angegeben
+- Sozialversicherungsnummer beantragt
+- Staatsangehoerigkeit angegeben
+- Steuerinformationen angegeben
+- Studentenstatus angegeben
 - Verfügbarkeiten angegeben

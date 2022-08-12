@@ -1,0 +1,46 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenstammdaten/sozialversicherungsnummer-beantragt",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenstammdaten:sozialversicherungsnummer-beantragt:eed47f89-0877-4159-a92e-4a4ad1fa128d",
+  "caused_by": "tech.studitemps:studentenstammdaten:sozialversicherungsnummer-beantragt:eed47f89-0877-4159-a92e-4a4ad1fa128d",
+  "correlates_with": "tech.studitemps:studentenstammdaten:sozialversicherungsnummer-beantragt:eed47f89-0877-4159-a92e-4a4ad1fa128d",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce",
+  "occurred_at": "2018-07-30T14:00:00+02:00",
+  "pii": {
+    "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce": [
+      "$.beantragt_sozialversicherungsnummer.geburtsort",
+      "$.beantragt_sozialversicherungsnummer.geburtsland",
+      "$.beantragt_sozialversicherungsnummer.geburtsname",
+      "$.beantragt_sozialversicherungsnummer.geschlecht"
+    ]
+  },
+  "beantragt_sozialversicherungsnummer": {
+    "student": "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce",
+    "geburtsort": {
+      "aad": "named_key",
+      "ciphertext": "DxAbH/JRmC+w\n",
+      "iv": "RcirYM3IAunCN8AT\n",
+      "tag": "nJeSJpUGK6hRaNfiqJ+4aQ==\n"
+    },
+    "geburtsland": {
+      "aad": "named_key",
+      "ciphertext": "LtWK/0WtqT0sy1pHVy4sGm1GM7uXd0xtv7JQYSh8\n",
+      "iv": "+a09z8eP2IJlSSvI\n",
+      "tag": "g8Xd2Nb+qDggn12bD0Scpg==\n"
+    },
+    "geburtsname": {
+      "aad": "named_key",
+      "ciphertext": "0CI3Ana9Uw==\n",
+      "iv": "n9FwN6XFZFQ51hnS\n",
+      "tag": "QyhNOJ9vPdql7r0yCQ2DSA==\n"
+    },
+    "geschlecht": {
+      "aad": "named_key",
+      "ciphertext": "mG4C8cIsyYv6\n",
+      "iv": "lbeBaZGdNjaolRYb\n",
+      "tag": "m2XTC/tGg2+bLi3NkWvKbA==\n"
+    }
+  }
+}

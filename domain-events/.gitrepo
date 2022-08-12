@@ -6,7 +6,7 @@
 [subrepo]
 	remote = git@github.com:STUDITEMPS/domain-events.git
 	branch = main
-	commit = b14d22c8110be63ff99892edddb42686c09d4a43
-	parent = b226682662d80905e4b3df592c8539eece831779
+	commit = f062d7158006dae16a362952480c8c566c93ca26
+	parent = 78a1f05988979016b591c70d4a7ddc7b80427be9
 	method = merge
 	cmdver = 0.4.3
