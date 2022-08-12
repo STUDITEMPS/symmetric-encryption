@@ -22,11 +22,11 @@ defmodule LimePie do
     end
   end
 
-  @spec encrypt_domain_event(domain_event(), named_keys(), fail_quietly :: boolean()) ::
+  @spec decrypt_domain_event(domain_event(), named_keys(), fail_quietly :: boolean()) ::
           {:ok, domain_event()} | {:error, atom()}
-  def decrypt_domain_event(event, named_keys, fail_quietly \\ false)
+  def decrypt_domain_event(domain_event, named_keys, fail_quietly \\ false)
 
-  def decrypt_domain_event(event, named_keys, false) do
+  def decrypt_domain_event(domain_event, named_keys, false) do
     with {:ok, paths_to_pii} <- paths_to_personally_identifiable_information(domain_event),
          {:ok, decrypted_values} <-
            map_values(paths_to_pii, domain_event, &decrypt_value(&1, named_keys)) do
