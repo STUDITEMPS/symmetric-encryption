@@ -2,7 +2,7 @@ version: '3.8'
 services:
   # Update this to the name of the service you want to work with in your docker-compose.yml file
   devcontainer:
-    image: ghcr.io/studitemps/snake-devcontainer-base:21e9c66217b6362c5c8ac762dd95babcf19ecd0b
+    image: ghcr.io/studitemps/snake-devcontainer-base:latest
 
     env_file:
       - .devcontainer/devcontainer.env

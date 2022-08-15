@@ -1,16 +1,21 @@
 #!/bin/bash -ieu
 
+set -x 
+asdf list
+asdf plugin list
+
 # install from .tool-versions
 asdf install
 
 # install rebar and hex, present in base image
-install-mix-tooling
-
-# add oban repository
-mix hex.repo add oban "https://getoban.pro/repo" --fetch-public-key "SHA256:4/OSKi0NRF91QVVXlGAhb/BIMLnK8NHcx/EWs+aIWPc" --auth-key $OBAN_LICENSE_KEY
+cd elixir
+$HOME/install-mix-tooling.sh
 
 # prepare application
 mix deps.get
-mix assets.setup
-mix ecto.setup
-MIX_ENV=test mix ecto.setup
+
+cd -
+
+cd ruby
+gem install bundler:2.3.10
+bin/setup
