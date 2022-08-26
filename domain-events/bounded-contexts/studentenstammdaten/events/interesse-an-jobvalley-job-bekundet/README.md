@@ -1,6 +1,6 @@
 ## Interesse an Jobvalley Job bekundet
 
-Dieses Event wird vom Stammdaten-Kontext publiziert, wenn sich ein Student mit einem Jobvalley-Account auf eine Jobvalley-Anzeige beworben hat.
+Dieses Event wird vom Stammdaten-Kontext publiziert, wenn sich ein Student mit einem Jobvalley-Account auf eine Jobvalley-Anzeige beworben hat. Eine Anzeige bezieht sich immer auf einen Auftrag. Ein Student kann sich nur einmal auf einen Auftrag bewerben, Mehrfachbewerbungen sind nicht möglich.
 
 ## Feldname
 

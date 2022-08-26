@@ -2,7 +2,9 @@
 
 ## Bounded Kontext
 
-Temping produziert das Event, sobald ein Customer Success Manager (oder evtl. ein sonstiger jobvalley Mitarbeiter, zum Beispiel das Erstqualifizierungs-Team) vermerkt hat, dass ein:e Student:in die Erstqualifizierung absolviert hat.
+Temping produziert das Event, sobald ein:e jobvalley Mitarbeiter:in vermerkt hat, dass ein:e Student:in beim erstmaligen Jobinterview war.
+
+Der Prozess hieß früher Erstqualifzierung (und noch vorher Intake) und inhaltlich soll auch weiterhin eine erste Qualifizierung der Student:innen während des Jobinterviews vorgenommen werden. Um diesen Termin von der bisherigen Form der Erstqualifzierungstermine inklusive kurzer jobvalley-Schulung abzuheben, wurde der Termin in "Jobinterview" umbenannt.
 
 ## Feldname
 

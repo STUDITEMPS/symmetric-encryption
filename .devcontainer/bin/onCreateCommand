@@ -1,0 +1,21 @@
+#!/bin/bash -ieu
+
+set -x 
+asdf list
+asdf plugin list
+
+# install from .tool-versions
+asdf install
+
+# install rebar and hex, present in base image
+cd elixir
+$HOME/install-mix-tooling.sh
+
+# prepare application
+mix deps.get
+
+cd -
+
+cd ruby
+gem install bundler:2.3.10
+bin/setup

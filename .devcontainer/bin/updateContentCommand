@@ -1,0 +1,18 @@
+#!/bin/bash -ieu
+
+set -x
+
+asdf plugin list
+
+# compile application
+cd elixir
+mix local.hex --force
+mix deps.get
+mix compile
+
+cd -
+
+cd ruby
+gem install bundler:2.3.10
+bin/setup
+

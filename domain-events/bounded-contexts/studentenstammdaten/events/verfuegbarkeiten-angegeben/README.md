@@ -39,4 +39,4 @@ Das Ende eines Tages wird als 24:00 übermittelt.
 
 | Routing Key  | Exchange  |
 |---|---|
-| studentenverwaltung.verfuegbarkeiten-angegeben | studentenverwaltung  |
+| studentenstammdaten.verfuegbarkeiten-angegeben | studentenverwaltung  |

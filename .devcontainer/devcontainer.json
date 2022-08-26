@@ -1,29 +1,44 @@
 {
-    "name": "Symmetric Encryption Development Configuration",
+    "name": "Freigabe Development Configuration",
     "dockerComposeFile": [
-        // "../docker-compose.yml",
+        "../docker-compose.yml",
         "docker-compose.yml"
     ],
-    "service": "rechnungsstellung",
+    "service": "devcontainer",
     "workspaceFolder": "/workspace",
     "shutdownAction": "stopCompose",
-    "remoteUser": "gitpod",
-    // "onCreateCommand": "bash -i -c '.devcontainer/persist_reload/setup.sh'",
-    // "updateContentCommand": "bash -i -c 'mix do deps.get, compile && MIX_ENV=test mix compile'",
+    "remoteUser": "jehovakel",
+    "initializeCommand": ".devcontainer/bin/initializeCommand",
+    "onCreateCommand": ".devcontainer/bin/onCreateCommand",
+    "updateContentCommand": ".devcontainer/bin/updateContentCommand",
     "extensions": [
         "JakeBecker.elixir-ls",
         "pantajoe.vscode-elixir-credo",
+        "phoenixframework.phoenix",
+        "alexkrechik.cucumberautocomplete",
         "ms-azuretools.vscode-docker",
         "me-dutour-mathieu.vscode-github-actions",
         "eamodio.gitlens"
     ],
     "settings": {
+        "files.associations": {
+            "*.feature": "feature"
+        },
         "files.autoSave": "onFocusChange",
         "editor.formatOnSave": true,
+        "cucumberautocomplete.formatConfOverride": {
+            "Funktionalität:": 0,
+            "Szenariogrundriss": 1,
+            "Grundlage": 1,
+            "Szenario:": 1,
+            "Angenommen": 2,
+            "Und": 2,
+            "Wenn": 2,
+            "Dann": 2
+        },
         "gitlens": {
             "showWelcomeOnInstall": false,
             "showWhatsNewAfterUpgrades": false
-        },
-        "elixir.credo.executePath": "/home/gitpod/.asdf/shims"
+        }
     }
 }

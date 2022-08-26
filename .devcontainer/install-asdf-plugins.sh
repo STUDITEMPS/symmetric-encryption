@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # activate asdf
 . $HOME/.asdf/asdf.sh
 # Plugin Versions are pinned because we want a 💯 Percent reproducible dev environment.

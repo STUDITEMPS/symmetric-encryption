@@ -1,0 +1,34 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenstammdaten/steuerinformationen-angegeben",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenstammdaten:steuerinformationen-angegeben:d372dacb-7922-4d96-b957-e88378866a62",
+  "caused_by": "tech.studitemps:studentenstammdaten:steuerinformationen-angegeben:d372dacb-7922-4d96-b957-e88378866a62",
+  "correlates_with": "tech.studitemps:studentenstammdaten:steuerinformationen-angegeben:d372dacb-7922-4d96-b957-e88378866a62",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce",
+  "occurred_at": "2018-07-30T14:00:00+02:00",
+  "pii": {
+    "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce": [
+      "$.gibt_steuerinformationen_an.steuerinformationen.klasse",
+      "$.gibt_steuerinformationen_an.steuerinformationen.identifikationsnummer"
+    ]
+  },
+  "gibt_steuerinformationen_an": {
+    "student": "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce",
+    "steuerinformationen": {
+      "klasse": {
+        "aad": "named_key",
+        "ciphertext": "VQ==\n",
+        "iv": "qgVeqwes4OjihNOY\n",
+        "tag": "zSci8iN+pS/Cot6KIehTeg==\n"
+      },
+      "identifikationsnummer": {
+        "aad": "named_key",
+        "ciphertext": "r1K+05DpD4gdfBU=\n",
+        "iv": "ZPUTiVwLHmmwWUTt\n",
+        "tag": "d0b3gnJxgD8Ji6VQEvHilw==\n"
+      }
+    }
+  }
+}

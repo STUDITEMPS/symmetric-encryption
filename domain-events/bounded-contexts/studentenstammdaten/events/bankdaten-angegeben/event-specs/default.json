@@ -1,0 +1,34 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenstammdaten/bankdaten-angegeben",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenstammdaten:bankdaten-angegeben:a9a7236e-c66b-436e-b7f4-b7302054d545",
+  "caused_by": "tech.studitemps:studentenstammdaten:bankdaten-angegeben:a9a7236e-c66b-436e-b7f4-b7302054d545",
+  "correlates_with": "tech.studitemps:studentenstammdaten:bankdaten-angegeben:a9a7236e-c66b-436e-b7f4-b7302054d545",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce",
+  "occurred_at": "2018-07-30T14:00:00+02:00",
+  "pii": {
+    "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce": [
+      "$.gibt_bankdaten_an.bankdaten.iban",
+      "$.gibt_bankdaten_an.bankdaten.bic"
+    ]
+  },
+  "gibt_bankdaten_an": {
+    "student": "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce",
+    "bankdaten": {
+      "iban": {
+        "aad": "named_key",
+        "ciphertext": "bodjceuR2d8I/V4joZWplsNAdMS9Bw==\n",
+        "iv": "cRFSuyqIwm7ZJ2k8\n",
+        "tag": "TPVyG1nL7ZxwgG0Gt4mQbw==\n"
+      },
+      "bic": {
+        "aad": "named_key",
+        "ciphertext": "UElBONeeCvKDoZM=\n",
+        "iv": "U8vfur2x2nVtc6n4\n",
+        "tag": "UEqqfxUVZaRCMGuyFQZ98g==\n"
+      } 
+    }
+  }
+}

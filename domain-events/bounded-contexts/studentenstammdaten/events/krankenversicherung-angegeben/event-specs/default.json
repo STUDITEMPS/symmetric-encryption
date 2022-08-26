@@ -1,0 +1,34 @@
+{
+  "@type": [
+    "https://studitemps.tech/specification/studentenstammdaten/krankenversicherung-angegeben",
+    "https://studitemps.tech/specification/domain-event"
+  ],
+  "@id": "tech.studitemps:studentenstammdaten:krankenversicherung-angegeben:c41e46c6-d84d-46ab-b0d4-fe41fd9cab9c",
+  "caused_by": "tech.studitemps:studentenstammdaten:krankenversicherung-angegeben:c41e46c6-d84d-46ab-b0d4-fe41fd9cab9c",
+  "correlates_with": "tech.studitemps:studentenstammdaten:krankenversicherung-angegeben:c41e46c6-d84d-46ab-b0d4-fe41fd9cab9c",
+  "enacted_by": "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce",
+  "occurred_at": "2018-07-30T14:00:00+02:00",
+  "pii": {
+    "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce": [
+      "$.gibt_krankenversicherung_an.krankenversicherung.versicherungsart",
+      "$.gibt_krankenversicherung_an.krankenversicherung.gesetzliche_versicherung"
+    ]
+  },
+  "gibt_krankenversicherung_an": {
+    "student": "tech.studitemps:studentenverwaltung:student:8fdeb311-e471-470c-8f79-f9ac7a59c1ce",
+    "krankenversicherung": {
+      "versicherungsart": {
+        "aad": "named_key",
+        "ciphertext": "wpXWEXTy/G/4yQ==\n",
+        "iv": "VR9enyCAxewcI+Ly\n",
+        "tag": "3kgzVeksajgLsbZ24KNJhw==\n"
+      },
+      "gesetzliche_versicherung": {
+        "aad": "named_key",
+        "ciphertext": "j3mRa8nNwrEjig==\n",
+        "iv": "XqnTaSWS3wdMjsT4\n",
+        "tag": "qELwISMZKe7oiYRRHIjEHg==\n"
+      }
+    }
+  }
+}
