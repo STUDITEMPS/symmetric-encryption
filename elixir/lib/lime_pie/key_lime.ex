@@ -4,6 +4,12 @@ defmodule LimePie.KeyLime do
   """
   defstruct [:name, :key]
 
+  require Logger
+
+  defmodule ConfigError do
+    defexception [:message]
+  end
+
   @type t :: %__MODULE__{
           name: binary(),
           key: binary()
@@ -51,15 +57,20 @@ defmodule LimePie.KeyLime do
 
   @spec parse_multiple_keys(binary) :: %{optional(binary) => t() | {:error, atom}}
 
-  def parse_multiple_keys(""), do: {:error, :empty_string_to_parse}
+  def parse_multiple_keys(""),
+    do: raise(ConfigError, message: "Keys configuration is empty.")
 
   def parse_multiple_keys(binary) do
     binary
     |> String.split(~r/;/)
     |> Enum.map(&parse/1)
     |> Enum.map(fn
-      {:ok, key_lime} -> {key_lime.name, key_lime}
-      {:error, type, name} -> {name, {:error, type}}
+      {:ok, key_lime} ->
+        {key_lime.name, key_lime}
+
+      {:error, error, name} ->
+        Logger.error("LimePie.KeyLime: Failed to parse key: #{name} with error: #{error}")
+        {name, {:error, error}}
     end)
     |> Enum.into(%{})
   end
