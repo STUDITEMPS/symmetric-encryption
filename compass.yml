@@ -1,0 +1,16 @@
+name: lime-pie
+id: 'ari:cloud:compass:e1d41f8a-4a61-4fa9-80d9-a0967619f2ea:component/e8fcfeae-19d1-4cce-9554-6226e62cd618/9f626b7d-420d-40fb-aee6-7a4bd0ba0fa5'
+description: Provides symmetric encrytion tooling for use at Studitemps.
+ownerId: 'ari:cloud:teams::team/02f444fe-c2c0-4af5-a033-cb345c5f2324'
+fields: {}
+links:
+  - name: null
+    type: REPOSITORY
+    url: 'https://github.com/STUDITEMPS/lime-pie'
+  - name: Engineering Slack Channel
+    type: CHAT_CHANNEL
+    url: 'https://jobvalley.slack.com/archives/C0L3ES65V'
+relationships: {}
+
+# Learn more about formatting compass.yml:
+# https://go.atlassian.com/compass-yml-format
