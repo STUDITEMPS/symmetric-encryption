@@ -61,7 +61,7 @@ module SymmetricEncryption
 
     key_name, key = named_key.split(":")
     cipher = ::OpenSSL::Cipher.new(ALGORITHM).encrypt
-    cipher.key = key
+    cipher.key = ::Base64.decode64(key)
     iv = cipher.random_iv
     cipher.iv = iv
     cipher.auth_data = ""
@@ -87,7 +87,7 @@ module SymmetricEncryption
 
   def self.decipher(key, ini_vector, tag, encrypted_data)
     decipher = ::OpenSSL::Cipher.new(ALGORITHM).decrypt
-    decipher.key = key
+    decipher.key = ::Base64.decode64(key)
     initialization_vector = decode(ini_vector)
     decipher.iv = initialization_vector
     decipher.auth_tag = tag
