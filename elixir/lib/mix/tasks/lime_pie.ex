@@ -20,7 +20,7 @@ defmodule Mix.Tasks.LimePie do
          {:ok, output} <- get_output(parsed),
          {:ok, filename} <- get_file_name(args),
          {:ok, raw_content} <- filename |> File.read(),
-         {:ok, event} <- raw_content |> Jason.decode(keys: :atoms),
+         {:ok, event} <- raw_content |> Jason.decode(),
          {:ok, converted_event} <-
            convert_event(event, operation, key_lime) do
       IO.write(output, converted_event |> Jason.encode!(pretty: true))

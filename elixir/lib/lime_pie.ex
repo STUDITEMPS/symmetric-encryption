@@ -90,16 +90,16 @@ defmodule LimePie do
 
     {:ok,
      %{
-       ciphertext: Base.encode64(encrypted_data),
-       aad: aad,
-       iv: Base.encode64(iv),
-       tag: Base.encode64(tag)
+       "ciphertext" => Base.encode64(encrypted_data),
+       "aad" => aad,
+       "iv" => Base.encode64(iv),
+       "tag" => Base.encode64(tag)
      }}
   end
 
   @spec decrypt_value(any(), named_keys()) ::
           {:ok, binary() | map()} | {:error, atom(), keyword()}
-  def decrypt_value(%{aad: key_name, iv: iv, tag: tag, ciphertext: ciphertext}, named_keys) do
+  def decrypt_value(%{"aad" => key_name, "iv" => iv, "tag" => tag, "ciphertext" => ciphertext}, named_keys) do
     with {:ok, named_key} <- named_keys |> Map.fetch(key_name),
          {:ok, decrypted_string} <-
            LimePie.SymmetricEncryption.decrypt(
@@ -127,7 +127,7 @@ defmodule LimePie do
   def decrypt_value(value, _named_keys), do: {:error, :value_is_not_encrypted, value}
 
   @spec paths_to_personally_identifiable_information(domain_event()) :: {:ok, paths_to_pii()}
-  def paths_to_personally_identifiable_information(%{pii: data_owners_with_paths_to_pii})
+  def paths_to_personally_identifiable_information(%{"pii" => data_owners_with_paths_to_pii})
       when is_map(data_owners_with_paths_to_pii) do
     {:ok,
      data_owners_with_paths_to_pii
@@ -141,8 +141,6 @@ defmodule LimePie do
        |> String.split(~r/\./)
        # drop the "$." at the beginning
        |> Enum.drop(1)
-       # use atoms, not string
-       |> Enum.map(&String.to_atom/1)
      end)}
   end
 

@@ -4,9 +4,9 @@ defmodule LimePieTest do
 
   describe("paths_to_personally_identifiable_information/1") do
     test "returns the list of referenced paths, dropping the referencing entity" do
-      assert {:ok, [[:a, :b], [:e, :f], [:c, :d]]} =
+      assert {:ok, [["a", "b"], ["e", "f"], ["c", "d"]]} =
                LimePie.paths_to_personally_identifiable_information(%{
-                 pii: %{
+                 "pii" => %{
                    "entity_1" => ["$.a.b", "$.e.f"],
                    "entity_2" => ["$.c.d", "$.e.f"]
                  }
@@ -23,10 +23,10 @@ defmodule LimePieTest do
   @other_key LimePie.KeyLime.parse("other_key:SCJz6GFD4krs4KN3Fdo1kXwsfJcm/7jZgrqu8fBX+H4=")
              |> elem(1)
   @valid_encrypted_value %{
-    aad: "valid_key",
-    ciphertext: "P51+eMDnA574QgFJ7r/Ijic=",
-    iv: "vs1ikTgY4AsYO8y3",
-    tag: "05bbRhBvHU2q3jz4RtgyhA=="
+    "aad" => "valid_key",
+    "ciphertext" => "P51+eMDnA574QgFJ7r/Ijic=",
+    "iv" => "vs1ikTgY4AsYO8y3",
+    "tag" => "05bbRhBvHU2q3jz4RtgyhA=="
   }
 
   describe "decrypt_value/2" do
@@ -69,10 +69,10 @@ defmodule LimePieTest do
         |> LimePie.SymmetricEncryption.encrypt(@valid_key.key, aad)
 
       encrypted_bad_value = %{
-        ciphertext: Base.encode64(encrypted_data),
-        aad: aad,
-        iv: Base.encode64(iv),
-        tag: Base.encode64(tag)
+        "ciphertext" => Base.encode64(encrypted_data),
+        "aad" => aad,
+        "iv" => Base.encode64(iv),
+        "tag" => Base.encode64(tag)
       }
 
       assert {:error, :jason_decoding_failed, _} =
@@ -88,7 +88,7 @@ defmodule LimePieTest do
   describe "encrypt_value/2" do
     test "returns an encrypted value" do
       assert {:ok, encrypted_value} = LimePie.encrypt_value("encrypt me!", @valid_key)
-      assert [:aad, :ciphertext, :iv, :tag] == Map.keys(encrypted_value) |> Enum.sort()
+      assert ["aad", "ciphertext", "iv", "tag"] == Map.keys(encrypted_value) |> Enum.sort()
 
       assert {:ok, "encrypt me!"} =
                LimePie.decrypt_value(encrypted_value, %{"valid_key" => @valid_key})
@@ -128,44 +128,44 @@ defmodule LimePieTest do
   end
 
   @unencrypted_event %{
-    pii: %{
+    "pii" => %{
       "entity_1" => ["$.a.b", "$.e.f"],
       "entity_2" => ["$.a.c", "$.e.f"]
     },
-    a: %{
-      b: "value at a.b",
-      c: "value at a.c",
-      d: "valut at a.d"
+    "a" => %{
+      "b" => "value at a.b",
+      "c" => "value at a.c",
+      "d" => "valut at a.d"
     },
-    e: %{f: "value at e.f", g: "value at e.g"}
+    "e" => %{"f" => "value at e.f", "g" => "value at e.g"}
   }
 
   @encrypted_event %{
-    a: %{
-      b: %{
-        aad: "valid_key",
-        ciphertext: "tgtOUyxPuAa0lAmjhFA=",
-        iv: "pH1QUmDfA2ZpGQ1G",
-        tag: "ZJW9TZpeAHmPOkODkaNicA=="
+    "a" => %{
+      "b" => %{
+        "aad" => "valid_key",
+        "ciphertext" => "tgtOUyxPuAa0lAmjhFA=",
+        "iv" => "pH1QUmDfA2ZpGQ1G",
+        "tag" => "ZJW9TZpeAHmPOkODkaNicA=="
       },
-      c: %{
-        aad: "valid_key",
-        ciphertext: "xl/jbBZt6QA5md0AHTA=",
-        iv: "i5orAWOEIzXO7eGB",
-        tag: "8+YTeqydI0Bywul6p0chaA=="
+      "c" => %{
+        "aad" => "valid_key",
+        "ciphertext" => "xl/jbBZt6QA5md0AHTA=",
+        "iv" => "i5orAWOEIzXO7eGB",
+        "tag" => "8+YTeqydI0Bywul6p0chaA=="
       },
-      d: "valut at a.d"
+      "d" => "valut at a.d"
     },
-    e: %{
-      f: %{
-        aad: "valid_key",
-        ciphertext: "xnsEH9e8NEPaH+ayw2s=",
-        iv: "d5P4J4IYiYNtkJv1",
-        tag: "xfUrldhVB+CJF/hM7+xqIw=="
+    "e" => %{
+      "f" => %{
+        "aad" => "valid_key",
+        "ciphertext" => "xnsEH9e8NEPaH+ayw2s=",
+        "iv" => "d5P4J4IYiYNtkJv1",
+        "tag" => "xfUrldhVB+CJF/hM7+xqIw=="
       },
-      g: "value at e.g"
+      "g" => "value at e.g"
     },
-    pii: %{"entity_1" => ["$.a.b", "$.e.f"], "entity_2" => ["$.a.c", "$.e.f"]}
+    "pii" => %{"entity_1" => ["$.a.b", "$.e.f"], "entity_2" => ["$.a.c", "$.e.f"]}
   }
 
   describe "decrypt_domain_event/2" do
@@ -177,9 +177,9 @@ defmodule LimePieTest do
     test "fails if no matching key is found" do
       assert {:error, :mapping_values_failed,
               [
-                unknown_key: [path_to_pii: [:a, :b], missing_key_name: "valid_key"],
-                unknown_key: [path_to_pii: [:e, :f], missing_key_name: "valid_key"],
-                unknown_key: [path_to_pii: [:a, :c], missing_key_name: "valid_key"]
+                unknown_key: [path_to_pii: ["a", "b"], missing_key_name: "valid_key"],
+                unknown_key: [path_to_pii: ["e", "f"], missing_key_name: "valid_key"],
+                unknown_key: [path_to_pii: ["a", "c"], missing_key_name: "valid_key"]
               ]} ==
                LimePie.decrypt_domain_event(@encrypted_event, %{"other_key" => @valid_key})
     end
@@ -187,9 +187,9 @@ defmodule LimePieTest do
     test "fails if named key does not work" do
       assert {:error, :mapping_values_failed,
               [
-                decrypt_failed: [path_to_pii: [:a, :b]],
-                decrypt_failed: [path_to_pii: [:e, :f]],
-                decrypt_failed: [path_to_pii: [:a, :c]]
+                decrypt_failed: [path_to_pii: ["a", "b"]],
+                decrypt_failed: [path_to_pii: ["e", "f"]],
+                decrypt_failed: [path_to_pii: ["a", "c"]]
               ]} ==
                LimePie.decrypt_domain_event(@encrypted_event, %{"valid_key" => @other_key})
     end
