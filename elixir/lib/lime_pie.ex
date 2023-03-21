@@ -103,10 +103,10 @@ defmodule LimePie do
     with {:ok, named_key} <- named_keys |> Map.fetch(key_name),
          {:ok, decrypted_string} <-
            LimePie.SymmetricEncryption.decrypt(
-             ciphertext |> Base.decode64!(),
+             ciphertext |> Base.decode64!(ignore: :whitespace),
              named_key.key,
-             iv |> Base.decode64!(),
-             tag |> Base.decode64!(),
+             iv |> Base.decode64!(ignore: :whitespace),
+             tag |> Base.decode64!(ignore: :whitespace),
              key_name
            ),
          {:ok, decoded_value} <-
