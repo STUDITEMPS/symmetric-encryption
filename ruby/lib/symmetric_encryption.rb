@@ -61,10 +61,10 @@ module SymmetricEncryption
 
     key_name, key = named_key.split(":")
     cipher = ::OpenSSL::Cipher.new(ALGORITHM).encrypt
-    cipher.key = ::Base64.decode64(key)
+    cipher.key = decode(key)
     iv = cipher.random_iv
     cipher.iv = iv
-    cipher.auth_data = ""
+    cipher.auth_data = key_name
 
     encrypted_data = cipher.update(data.to_s) + cipher.final
 
@@ -81,21 +81,21 @@ module SymmetricEncryption
       key_name, key = named_key.split(":")
       next if aad != key_name
 
-      return decipher(key, initialization_vector, tag, encrypted_data)
+      return decipher(key, initialization_vector, key_name, tag, encrypted_data)
     end
   end
 
-  def self.decipher(key, ini_vector, tag, encrypted_data)
+  def self.decipher(key, ini_vector, aad, tag, encrypted_data)
     decipher = ::OpenSSL::Cipher.new(ALGORITHM).decrypt
     decipher.key = ::Base64.decode64(key)
     initialization_vector = decode(ini_vector)
     decipher.iv = initialization_vector
     decipher.auth_tag = tag
-    decipher.auth_data = ""
+    decipher.auth_data = aad
 
     encrypted_data = decode(encrypted_data)
     decipher.update(encrypted_data) + decipher.final
-  rescue ::OpenSSL::CipherError
+  rescue ::OpenSSL::Cipher::CipherError
     raise DecryptionError
   end
 
@@ -109,10 +109,10 @@ module SymmetricEncryption
   end
 
   def self.encode(value)
-    ::Base64.encode64(value)
+    ::Base64.encode64(value).strip
   end
 
   def self.decode(value)
-    ::Base64.decode64(value)
+    ::Base64.decode64(value.strip)
   end
 end
