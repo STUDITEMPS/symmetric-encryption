@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-cd $(dirname $0)/../ruby
+PROJECT_DIR="$(dirname "$0")/.."
+cd "${PROJECT_DIR}/ruby"
 
 SOURCE_FILE="$1"
 NAMED_KEY="$2"
-ruby ./lib/symmetric_encryption/script.rb --key "$NAMED_KEY" --decode $SOURCE_FILE 
+ruby ./lib/symmetric_encryption/script.rb --key "$NAMED_KEY" --decode "../${PROJECT_DIR}/${SOURCE_FILE}" 

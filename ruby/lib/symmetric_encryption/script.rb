@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
-require 'pry'
+require "bundler/setup"
+Bundler.require(:default)
+
 require "json"
-require_relative "../symmetric_encryption"
 
 def get_key(args)
   key_index = args.index { |arg| arg == "--key" }

@@ -1,0 +1,4 @@
+{
+  "pii": { "alice": ["$.message"] },
+  "message": "Hey Bob, stop sniffing around stuff that does not concern you!"
+}

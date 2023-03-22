@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-cd $(dirname $0)/../elixir
+PROJECT_DIR="$(dirname "$0")/.."
+cd "${PROJECT_DIR}/elixir"
 
 SOURCE_FILE="$1"
 NAMED_KEY="$2"
-mix lime_pie --key "$NAMED_KEY" --decode $SOURCE_FILE 
+mix lime_pie --key "$NAMED_KEY" --decode "../${PROJECT_DIR}/${SOURCE_FILE}" 
