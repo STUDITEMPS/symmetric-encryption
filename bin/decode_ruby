@@ -5,4 +5,4 @@ cd "${PROJECT_DIR}/ruby"
 
 SOURCE_FILE="$1"
 NAMED_KEY="$2"
-ruby ./lib/symmetric_encryption/script.rb --key "$NAMED_KEY" --decode "../${PROJECT_DIR}/${SOURCE_FILE}" 
+bundle exec ruby ./lib/symmetric_encryption/script.rb --key "$NAMED_KEY" --decode "../${PROJECT_DIR}/${SOURCE_FILE}" 

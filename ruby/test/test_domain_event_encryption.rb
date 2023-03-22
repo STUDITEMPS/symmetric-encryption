@@ -4,9 +4,13 @@ require "test_helper"
 require "securerandom"
 require "json"
 
-class TestSymmetricEncryption < Minitest::Test
+# tests the encryption and decryption of domain events in a
+# specific json format.
+class TestDomainEventEncryption < Minitest::Test
   def named_key
-    @named_key ||= "randomlyNamedKey:#{SecureRandom.hex(16)}"
+    random_key = SecureRandom.hex(16)
+    base_64_encoded_key = Base64.encode64(random_key)
+    @named_key ||= "randomlyNamedKey:#{base_64_encoded_key}"
   end
 
   def test_encrypts_domain_event
@@ -23,7 +27,7 @@ class TestSymmetricEncryption < Minitest::Test
 
     encrypted_domain_event = encrypt_event(domain_event)
 
-    assert JSON(domain_event) == encrypted_domain_event
+    assert_equal JSON.parse(domain_event), encrypted_domain_event
   end
 
   def test_encrypts_domain_event_with_integer_value
@@ -37,7 +41,7 @@ class TestSymmetricEncryption < Minitest::Test
     decrypted_domain_event = decrypt_event(encrypted_domain_event)
 
     data = decrypted_domain_event["erhoeht_anzahl_benoetigter_studenten_in_schicht"]["anzahl_benoetigter_studenten"]
-    assert data == raw_number.to_s
+    assert data == raw_number
   end
 
   def test_encrypts_domain_event_with_optional_value
@@ -45,29 +49,21 @@ class TestSymmetricEncryption < Minitest::Test
 
     encrypted_domain_event = encrypt_event(domain_event)
 
-    payload = encrypted_domain_event["legt_unternehmensaccount_an"]
-    assert payload["vorname"].nil?
-    assert !payload["unternehmensname"].nil?
+    assert encrypted_domain_event.keys == JSON.parse(domain_event).keys
 
     decrypted_domain_event = decrypt_event(encrypted_domain_event)
-
-    payload = decrypted_domain_event["legt_unternehmensaccount_an"]
-    assert payload.key?("vorname")
-    assert payload["vorname"].nil?
+    assert decrypted_domain_event == JSON.parse(domain_event)
   end
 
-  def test_encrypts_domain_event_with_optional_value_missing
+  def test_raises_exception_when_encrypting_domain_event_with_value_missing
     raw_domain_event = load_domain_event("anzeigenkunden", "unternehmensaccount-angelegt")
 
     domain_event = JSON(raw_domain_event)
     domain_event["legt_unternehmensaccount_an"].delete("email")
 
-    encrypted_domain_event = encrypt_event(domain_event.to_json)
-
-    assert !encrypted_domain_event["legt_unternehmensaccount_an"].key?("email")
-
-    decrypted_domain_event = decrypt_event(encrypted_domain_event)
-    assert !decrypted_domain_event["legt_unternehmensaccount_an"].key?("email")
+    assert_raises SymmetricEncryption::PathNotFoundError do
+      encrypt_event(domain_event.to_json)
+    end
   end
 
   def test_decrypt_domain_event

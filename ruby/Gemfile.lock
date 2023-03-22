@@ -11,6 +11,8 @@ GEM
     json (2.6.2)
     method_source (1.0.0)
     minitest (5.16.2)
+    minitest-assert-json-equal (0.2.1)
+      minitest (~> 5.0)
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
@@ -42,6 +44,7 @@ PLATFORMS
 
 DEPENDENCIES
   minitest (~> 5.0)
+  minitest-assert-json-equal
   pry (~> 0.14)
   rake (~> 13.0)
   rubocop (~> 1.21)
