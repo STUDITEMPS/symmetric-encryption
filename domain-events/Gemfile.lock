@@ -45,7 +45,8 @@ GEM
       multi_json (~> 1.15)
     rainbow (3.0.0)
     regexp_parser (2.1.1)
-    rexml (3.2.5)
+    rexml (3.3.3)
+      strscan
     rubocop (1.20.0)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
@@ -61,6 +62,7 @@ GEM
       rexml
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
+    strscan (3.1.0)
     unicode-display_width (2.0.0)
 
 PLATFORMS
